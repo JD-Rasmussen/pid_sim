@@ -1,0 +1,109 @@
+Project TODO list (structured)
+Phase 0 – Project setup
+[ ] Pick stack: C++ + Qt Widgets (or another GUI framework).
+[ ] Create a new project and verify:
+[ ] A window opens.
+[ ] A timer ticks (e.g., prints to console every 100 ms).
+Phase 1 – Core PID block
+Goal: A reusable PID “function block” with no GUI.
+
+[ ] Define a PIDController class:
+[ ] Members: Kp, Ki, Kd, integral, prev_error, maybe output_min/max.
+[ ] Constructor to set gains and limits.
+[ ] reset() method (zero integral, prev_error).
+[ ] update(setpoint, measurement, dt) method that returns control output.
+[ ] Implement:
+[ ] P term: Kp * error.
+[ ] I term with anti‑windup (clamp integral or conditional integration).
+[ ] D term, probably on measurement or error, with basic filtering if you like.
+[ ] Write a simple console test:
+[ ] Step input + crude first‑order process model.
+[ ] Print PV and controller output over time to confirm behavior makes sense.
+Phase 2 – Simulation environment(s)
+Goal: A small “process library” you can plug the PID into.
+
+Start with 1–2 simple models; you can add more later.
+
+[ ] Create a ProcessModel interface / base:
+e.g. double update(double input, double dt) → returns new PV.
+[ ] Implement heating scenario:
+[ ] State: temperature.
+[ ] Parameters: ambient temp, heater gain, time constant, losses.
+[ ] update() equation (simple first‑order or integrator).
+[ ] Implement tank level/flow scenario:
+[ ] State: level.
+[ ] Parameters: tank area, inflow (from controller), outflow (maybe proportional to level).
+[ ] Basic integrator model: level += (inflow - outflow) * dt.
+[ ] Write another console harness:
+[ ] Choose a model.
+[ ] Run PID + process loop, log PV, SP, and output.
+[ ] Adjust gains manually and see qualitative differences.
+Phase 3 – Basic GUI (numeric + simple 2D)
+Goal: Same logic as console, but user‑friendly.
+
+[ ] GUI inputs:
+[ ] Fields/spin boxes for Kp, Ki, Kd, setpoint.
+[ ] Dropdown to select process model (heating vs tank, etc.).
+[ ] Start/Stop/Reset buttons.
+[ ] Simulation control:
+[ ] Use a QTimer to call stepSimulation() at fixed dt.
+[ ] Each step:
+[ ] Call PID.update(SP, PV, dt).
+[ ] Call ProcessModel.update(output, dt).
+[ ] Store PV and output (for display).
+[ ] Basic 2D visualization:
+[ ] For tank: draw rectangle + fill height proportional to level.
+[ ] For heater: draw a block whose color depends on temperature.
+[ ] Trigger repaint on each timer tick.
+Phase 4 – “Advanced” control features
+Goal: Richer control structures once basics work.
+
+4.1 Cascade control
+[ ] Design structure:
+[ ] Primary PID: controls “outer” variable (e.g., tank level).
+[ ] Secondary PID: controls “inner” variable (e.g., flow/valve position or temperature).
+[ ] Implement a CascadeController:
+[ ] Primary output becomes secondary setpoint.
+[ ] Secondary output drives the process.
+[ ] Add GUI switches:
+[ ] Mode: single loop vs cascade.
+[ ] Show both loops’ values (PV/SP for each).
+4.2 Feedforward
+[ ] Add an optional feedforward term:
+[ ] e.g. u = PID_output + FF * measured_disturbance.
+[ ] In simulation, create a disturbance input (e.g., step in outflow, change in ambient temperature).
+[ ] GUI options:
+[ ] Enable/disable feedforward.
+[ ] Adjust FF gain.
+[ ] Trigger disturbance events and visualize effect.
+Phase 5 – Measurement filtering & “ugly” processes
+Goal: More realistic, noisy/jittery signals.
+
+5.1 Input filtering
+[ ] Implement a simple filter block:
+[ ] Moving average, or
+[ ] First‑order low‑pass: y += alpha * (x - y).
+[ ] Allow:
+[ ] Raw PV → optional filter → PID.
+[ ] Tunable filter strength (alpha or window size).
+5.2 Nasty process behavior
+[ ] Add noise to PV:
+
+[ ] Gaussian or uniform random component.
+[ ] Add dead time (transport delay) to some models if desired.
+
+[ ] Possibly add non‑linearities:
+
+[ ] Saturations (valve max/min).
+[ ] Different gains in different regions.
+[ ] GUI toggles:
+
+[ ] Enable/disable noise.
+[ ] Enable/disable delay.
+[ ] Adjust noise amplitude.
+Phase 6 – Polish and packaging
+[ ] Clean up code into logical modules/files.
+[ ] Add basic labels, units, tooltips in the UI.
+[ ] Preconfigure a few example scenarios with presets.
+[ ] Build release .exe:
+[ ] Verify it runs on a “clean” machine if you can test that.
