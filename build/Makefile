@@ -153,6 +153,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PidSim.dir/build.make CMakeFiles/PidSim.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/pid_panel.o: src/pid_panel.cpp.o
+.PHONY : src/pid_panel.o
+
+# target to build an object file
+src/pid_panel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PidSim.dir/build.make CMakeFiles/PidSim.dir/src/pid_panel.cpp.o
+.PHONY : src/pid_panel.cpp.o
+
+src/pid_panel.i: src/pid_panel.cpp.i
+.PHONY : src/pid_panel.i
+
+# target to preprocess a source file
+src/pid_panel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PidSim.dir/build.make CMakeFiles/PidSim.dir/src/pid_panel.cpp.i
+.PHONY : src/pid_panel.cpp.i
+
+src/pid_panel.s: src/pid_panel.cpp.s
+.PHONY : src/pid_panel.s
+
+# target to generate assembly for a file
+src/pid_panel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PidSim.dir/build.make CMakeFiles/PidSim.dir/src/pid_panel.cpp.s
+.PHONY : src/pid_panel.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/pid_panel.o"
+	@echo "... src/pid_panel.i"
+	@echo "... src/pid_panel.s"
 .PHONY : help
 
 

@@ -8,6 +8,8 @@ find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 add_executable(PidSim
     src/main.cpp
+    src/pid_panel.cpp
+    src/pid_panel.h
 )
 
 target_link_libraries(PidSim PRIVATE Qt5::Widgets)

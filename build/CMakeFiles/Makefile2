@@ -81,12 +81,12 @@ clean: CMakeFiles/PidSim.dir/clean
 CMakeFiles/PidSim.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PidSim.dir/build.make CMakeFiles/PidSim.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PidSim.dir/build.make CMakeFiles/PidSim.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=1,2 "Built target PidSim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=1,2,3 "Built target PidSim"
 .PHONY : CMakeFiles/PidSim.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/PidSim.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/PidSim.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles 0
 .PHONY : CMakeFiles/PidSim.dir/rule
