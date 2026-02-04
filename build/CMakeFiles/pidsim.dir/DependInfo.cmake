@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/main.cpp" "CMakeFiles/PidSim.dir/src/main.cpp.o" "gcc" "CMakeFiles/PidSim.dir/src/main.cpp.o.d"
+  "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/main.cpp" "CMakeFiles/pidsim.dir/src/main.cpp.o" "gcc" "CMakeFiles/pidsim.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

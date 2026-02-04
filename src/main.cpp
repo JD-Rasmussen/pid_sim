@@ -1,41 +1,49 @@
 #include <QApplication>
-//#include <QWidget>
-//#include <QLabel>
+#include <QWidget>
+#include <QLabel>
 #include <QVBoxLayout>
 #include <QTimer>
-//#include <QDoubleSpinBox>
-
-#include "pid_panel.h"
+#include <QElapsedTimer>
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
 
+    // Main window
     QWidget window;
-    window.setWindowTitle("PID Simulator");
+    window.setWindowTitle("PID Sim");
     window.resize(800, 600);
 
+    // Layout + label to show a “simulation value”
     auto *layout = new QVBoxLayout(&window);
-    auto *panel  = new PidPanel(&window);
-    layout->addWidget(panel);
+    auto *label  = new QLabel("Tick: 0");
+    layout->addWidget(label);
 
-    int counter = 0;
+    QElapsedTimer clock;
+    clock.start();
+
+    double accumulator = 0.0;
+    const double fixed_dt = 0.010;   // 10 ms “physics” step
 
     QTimer timer;
-    QObject::connect(&timer, &QTimer::timeout, [&]() {
-        counter++;
-        double kp = panel->kp();
-        double ki = panel->ki();
-        double kd = panel->kd();
-        panel->setTickText(
-            QString("Tick: %1 | Kp=%2 Ki=%3 Kd=%4")
-                .arg(counter)
-                .arg(kp)
-                .arg(ki)
-                .arg(kd)
-        );
-    });
-    timer.start(100);
+    timer.setTimerType(Qt::PreciseTimer);
+    timer.start(10);                 // UI heartbeat request (not a guarantee)
+    int tickCount = 0;
 
+    QObject::connect(&timer, &QTimer::timeout, [&] {
+        const double dt_real = clock.restart() / 1000.0;  // seconds
+        accumulator += dt_real;
+
+        int substeps = 0;
+        const int maxSubsteps = 5;   // safety guard
+
+        while (accumulator >= fixed_dt && substeps < maxSubsteps) {
+            // simulateOneStep(fixed_dt);   // PID.update(..., fixed_dt); plant.step(..., fixed_dt);
+            ++tickCount;
+            accumulator -= fixed_dt;
+            ++substeps;
+        }
+        label->setText(QString("Tick: %1").arg(tickCount));
+    });
     window.show();
     return app.exec();
 }

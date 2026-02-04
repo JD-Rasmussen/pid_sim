@@ -6,10 +6,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-add_executable(PidSim
+add_executable(pidsim
     src/main.cpp
-    src/pid_panel.cpp
-    src/pid_panel.h
 )
 
-target_link_libraries(PidSim PRIVATE Qt5::Widgets)
+target_link_libraries(pidsim PRIVATE Qt5::Widgets)

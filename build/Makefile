@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named PidSim
+# Target rules for targets named pidsim
 
 # Build rule for target.
-PidSim: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PidSim
-.PHONY : PidSim
+pidsim: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pidsim
+.PHONY : pidsim
 
 # fast build rule for target.
-PidSim/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PidSim.dir/build.make CMakeFiles/PidSim.dir/build
-.PHONY : PidSim/fast
+pidsim/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/build
+.PHONY : pidsim/fast
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PidSim.dir/build.make CMakeFiles/PidSim.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -142,7 +142,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PidSim.dir/build.make CMakeFiles/PidSim.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -150,32 +150,8 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PidSim.dir/build.make CMakeFiles/PidSim.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
-
-src/pid_panel.o: src/pid_panel.cpp.o
-.PHONY : src/pid_panel.o
-
-# target to build an object file
-src/pid_panel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PidSim.dir/build.make CMakeFiles/PidSim.dir/src/pid_panel.cpp.o
-.PHONY : src/pid_panel.cpp.o
-
-src/pid_panel.i: src/pid_panel.cpp.i
-.PHONY : src/pid_panel.i
-
-# target to preprocess a source file
-src/pid_panel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PidSim.dir/build.make CMakeFiles/PidSim.dir/src/pid_panel.cpp.i
-.PHONY : src/pid_panel.cpp.i
-
-src/pid_panel.s: src/pid_panel.cpp.s
-.PHONY : src/pid_panel.s
-
-# target to generate assembly for a file
-src/pid_panel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PidSim.dir/build.make CMakeFiles/PidSim.dir/src/pid_panel.cpp.s
-.PHONY : src/pid_panel.cpp.s
 
 # Help Target
 help:
@@ -185,13 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... PidSim"
+	@echo "... pidsim"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/pid_panel.o"
-	@echo "... src/pid_panel.i"
-	@echo "... src/pid_panel.s"
 .PHONY : help
 
 
