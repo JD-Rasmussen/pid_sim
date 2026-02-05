@@ -12,15 +12,17 @@ class PID{
 
     public:
         //construct
-        PID(Params params);
+        PID() = default;
+        explicit PID(const Params& p);
 
-        //destruct
 
+        void setParams(const Params& p);
+        Params params() const;
         void reset();
         double update(double PV, double dt);
 
     private:
-        Params params_;
+        Params params_{};
         double integral_{0.0};
         double lastOutput_{0.0};
         bool first_{true};
