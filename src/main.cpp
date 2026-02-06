@@ -4,8 +4,29 @@
 #include <QVBoxLayout>
 #include <QTimer>
 #include <QElapsedTimer>
+#include "pid.h"
+#include <array>
+
+
+
 
 int main(int argc, char *argv[]) {
+
+    const size_t NUM_PIDS = 4; // number of PID controllers
+    std::array<PID, NUM_PIDS> pids;
+    Params params[NUM_PIDS]; // array to hold parameters for each PID controller
+
+    // init
+    for (size_t i = 0; i < NUM_PIDS; ++i) {
+        pids[i] = PID(); // Initialize each PID controller
+        params[i].SP = 100.0 + i * 10.0; // Set different setpoints for each PID
+        params[i].Kp = 1.0;     // Set different proportional gains
+        params[i].Tn = 120.0;    // Set different integral times
+        params[i].Td = 0.0;    // Set different derivative times
+        pids[i].setParams(params[i]);
+        pids[i].reset(); // Reset each PID controller to clear any previous state
+    }
+
     QApplication app(argc, argv);
 
     // Main window
@@ -35,9 +56,13 @@ int main(int argc, char *argv[]) {
 
         int substeps = 0;
         const int maxSubsteps = 5;   // safety guard
-
         while (accumulator >= fixed_dt && substeps < maxSubsteps) {
-            // simulateOneStep(fixed_dt);   // PID.update(..., fixed_dt); plant.step(..., fixed_dt);
+            for (auto& pid : pids) {
+                double pv = 0.0; // placeholder for actual PV when enviroment is added
+                double u  = pid.update(pv, fixed_dt);
+            // add output later
+            }
+
             ++tickCount;
             accumulator -= fixed_dt;
             ++substeps;
