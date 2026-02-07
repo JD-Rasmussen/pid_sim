@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/pidsim.dir/src/main.cpp.o -o pidsim  /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13 
+/usr/bin/c++ CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o CMakeFiles/pidsim.dir/src/main.cpp.o CMakeFiles/pidsim.dir/src/pid.cpp.o CMakeFiles/pidsim.dir/src/PIDUI.cpp.o -o pidsim  /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13 

@@ -75,10 +75,13 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "CMakeFiles/pidsim_autogen.dir/AutogenInfo.json"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/pidsim.dir/DependInfo.cmake"
+  "CMakeFiles/pidsim_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "CMakeFiles/pidsim_autogen.dir/DependInfo.cmake"
   )

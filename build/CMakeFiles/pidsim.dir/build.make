@@ -69,10 +69,30 @@ include CMakeFiles/pidsim.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/pidsim.dir/flags.make
 
+pidsim_autogen/timestamp: /usr/lib/qt5/bin/moc
+pidsim_autogen/timestamp: CMakeFiles/pidsim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target pidsim"
+	/usr/bin/cmake -E cmake_autogen /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E touch /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/timestamp
+
+CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o: CMakeFiles/pidsim.dir/flags.make
+CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o: pidsim_autogen/mocs_compilation.cpp
+CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o: CMakeFiles/pidsim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o -MF CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o -c /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/mocs_compilation.cpp
+
+CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/mocs_compilation.cpp > CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.i
+
+CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/mocs_compilation.cpp -o CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.s
+
 CMakeFiles/pidsim.dir/src/main.cpp.o: CMakeFiles/pidsim.dir/flags.make
 CMakeFiles/pidsim.dir/src/main.cpp.o: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/main.cpp
 CMakeFiles/pidsim.dir/src/main.cpp.o: CMakeFiles/pidsim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pidsim.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pidsim.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pidsim.dir/src/main.cpp.o -MF CMakeFiles/pidsim.dir/src/main.cpp.o.d -o CMakeFiles/pidsim.dir/src/main.cpp.o -c /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/main.cpp
 
 CMakeFiles/pidsim.dir/src/main.cpp.i: cmake_force
@@ -83,20 +103,54 @@ CMakeFiles/pidsim.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pidsim.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/main.cpp -o CMakeFiles/pidsim.dir/src/main.cpp.s
 
+CMakeFiles/pidsim.dir/src/pid.cpp.o: CMakeFiles/pidsim.dir/flags.make
+CMakeFiles/pidsim.dir/src/pid.cpp.o: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.cpp
+CMakeFiles/pidsim.dir/src/pid.cpp.o: CMakeFiles/pidsim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pidsim.dir/src/pid.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pidsim.dir/src/pid.cpp.o -MF CMakeFiles/pidsim.dir/src/pid.cpp.o.d -o CMakeFiles/pidsim.dir/src/pid.cpp.o -c /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.cpp
+
+CMakeFiles/pidsim.dir/src/pid.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pidsim.dir/src/pid.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.cpp > CMakeFiles/pidsim.dir/src/pid.cpp.i
+
+CMakeFiles/pidsim.dir/src/pid.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pidsim.dir/src/pid.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.cpp -o CMakeFiles/pidsim.dir/src/pid.cpp.s
+
+CMakeFiles/pidsim.dir/src/PIDUI.cpp.o: CMakeFiles/pidsim.dir/flags.make
+CMakeFiles/pidsim.dir/src/PIDUI.cpp.o: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.cpp
+CMakeFiles/pidsim.dir/src/PIDUI.cpp.o: CMakeFiles/pidsim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pidsim.dir/src/PIDUI.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pidsim.dir/src/PIDUI.cpp.o -MF CMakeFiles/pidsim.dir/src/PIDUI.cpp.o.d -o CMakeFiles/pidsim.dir/src/PIDUI.cpp.o -c /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.cpp
+
+CMakeFiles/pidsim.dir/src/PIDUI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pidsim.dir/src/PIDUI.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.cpp > CMakeFiles/pidsim.dir/src/PIDUI.cpp.i
+
+CMakeFiles/pidsim.dir/src/PIDUI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pidsim.dir/src/PIDUI.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.cpp -o CMakeFiles/pidsim.dir/src/PIDUI.cpp.s
+
 # Object files for target pidsim
 pidsim_OBJECTS = \
-"CMakeFiles/pidsim.dir/src/main.cpp.o"
+"CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o" \
+"CMakeFiles/pidsim.dir/src/main.cpp.o" \
+"CMakeFiles/pidsim.dir/src/pid.cpp.o" \
+"CMakeFiles/pidsim.dir/src/PIDUI.cpp.o"
 
 # External object files for target pidsim
 pidsim_EXTERNAL_OBJECTS =
 
+pidsim: CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o
 pidsim: CMakeFiles/pidsim.dir/src/main.cpp.o
+pidsim: CMakeFiles/pidsim.dir/src/pid.cpp.o
+pidsim: CMakeFiles/pidsim.dir/src/PIDUI.cpp.o
 pidsim: CMakeFiles/pidsim.dir/build.make
 pidsim: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 pidsim: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 pidsim: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 pidsim: CMakeFiles/pidsim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable pidsim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable pidsim"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pidsim.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -107,7 +161,7 @@ CMakeFiles/pidsim.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/pidsim.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/pidsim.dir/clean
 
-CMakeFiles/pidsim.dir/depend:
+CMakeFiles/pidsim.dir/depend: pidsim_autogen/timestamp
 	cd /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/pidsim.dir/depend
 

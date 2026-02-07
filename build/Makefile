@@ -129,6 +129,80 @@ pidsim/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/build
 .PHONY : pidsim/fast
 
+#=============================================================================
+# Target rules for targets named pidsim_autogen_timestamp_deps
+
+# Build rule for target.
+pidsim_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pidsim_autogen_timestamp_deps
+.PHONY : pidsim_autogen_timestamp_deps
+
+# fast build rule for target.
+pidsim_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim_autogen_timestamp_deps.dir/build.make CMakeFiles/pidsim_autogen_timestamp_deps.dir/build
+.PHONY : pidsim_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named pidsim_autogen
+
+# Build rule for target.
+pidsim_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pidsim_autogen
+.PHONY : pidsim_autogen
+
+# fast build rule for target.
+pidsim_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim_autogen.dir/build.make CMakeFiles/pidsim_autogen.dir/build
+.PHONY : pidsim_autogen/fast
+
+pidsim_autogen/mocs_compilation.o: pidsim_autogen/mocs_compilation.cpp.o
+.PHONY : pidsim_autogen/mocs_compilation.o
+
+# target to build an object file
+pidsim_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o
+.PHONY : pidsim_autogen/mocs_compilation.cpp.o
+
+pidsim_autogen/mocs_compilation.i: pidsim_autogen/mocs_compilation.cpp.i
+.PHONY : pidsim_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+pidsim_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.i
+.PHONY : pidsim_autogen/mocs_compilation.cpp.i
+
+pidsim_autogen/mocs_compilation.s: pidsim_autogen/mocs_compilation.cpp.s
+.PHONY : pidsim_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+pidsim_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.s
+.PHONY : pidsim_autogen/mocs_compilation.cpp.s
+
+src/PIDUI.o: src/PIDUI.cpp.o
+.PHONY : src/PIDUI.o
+
+# target to build an object file
+src/PIDUI.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/PIDUI.cpp.o
+.PHONY : src/PIDUI.cpp.o
+
+src/PIDUI.i: src/PIDUI.cpp.i
+.PHONY : src/PIDUI.i
+
+# target to preprocess a source file
+src/PIDUI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/PIDUI.cpp.i
+.PHONY : src/PIDUI.cpp.i
+
+src/PIDUI.s: src/PIDUI.cpp.s
+.PHONY : src/PIDUI.s
+
+# target to generate assembly for a file
+src/PIDUI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/PIDUI.cpp.s
+.PHONY : src/PIDUI.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -153,6 +227,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/pid.o: src/pid.cpp.o
+.PHONY : src/pid.o
+
+# target to build an object file
+src/pid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/pid.cpp.o
+.PHONY : src/pid.cpp.o
+
+src/pid.i: src/pid.cpp.i
+.PHONY : src/pid.i
+
+# target to preprocess a source file
+src/pid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/pid.cpp.i
+.PHONY : src/pid.cpp.i
+
+src/pid.s: src/pid.cpp.s
+.PHONY : src/pid.s
+
+# target to generate assembly for a file
+src/pid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/pid.cpp.s
+.PHONY : src/pid.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,10 +259,21 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... pidsim_autogen"
+	@echo "... pidsim_autogen_timestamp_deps"
 	@echo "... pidsim"
+	@echo "... pidsim_autogen/mocs_compilation.o"
+	@echo "... pidsim_autogen/mocs_compilation.i"
+	@echo "... pidsim_autogen/mocs_compilation.s"
+	@echo "... src/PIDUI.o"
+	@echo "... src/PIDUI.i"
+	@echo "... src/PIDUI.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/pid.o"
+	@echo "... src/pid.i"
+	@echo "... src/pid.s"
 .PHONY : help
 
 

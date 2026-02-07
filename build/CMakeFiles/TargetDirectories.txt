@@ -1,3 +1,5 @@
 /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim.dir
 /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/edit_cache.dir
 /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/rebuild_cache.dir
+/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim_autogen_timestamp_deps.dir
+/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim_autogen.dir

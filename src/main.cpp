@@ -4,9 +4,12 @@
 #include <QVBoxLayout>
 #include <QTimer>
 #include <QElapsedTimer>
-#include "pid.h"
 #include <array>
+#include <QDoubleSpinBox>
+#include <QSpinBox>
 
+#include "pid.h"
+#include "PIDUI.h"
 
 
 
@@ -15,6 +18,8 @@ int main(int argc, char *argv[]) {
     const size_t NUM_PIDS = 4; // number of PID controllers
     std::array<PID, NUM_PIDS> pids;
     Params params[NUM_PIDS]; // array to hold parameters for each PID controller
+    int activePIDIndex = 0; // index of the currently selected pid controller
+
 
     // init
     for (size_t i = 0; i < NUM_PIDS; ++i) {
@@ -34,10 +39,29 @@ int main(int argc, char *argv[]) {
     window.setWindowTitle("PID Sim");
     window.resize(800, 600);
 
-    // Layout + label to show a “simulation value”
+    //pid panel 
     auto *layout = new QVBoxLayout(&window);
+    auto* paramsPanel = new PidParamsPanel(&window);
+    layout->addWidget(paramsPanel);
+    auto* indexSpin = new QSpinBox(&window);
+    indexSpin->setRange(0, NUM_PIDS - 1);
+    layout->addWidget(indexSpin);
+    paramsPanel->setParams(pids[activePIDIndex].params());
+
     auto *label  = new QLabel("Tick: 0");
     layout->addWidget(label);
+
+    QObject::connect(indexSpin, QOverload<int>::of(&QSpinBox::valueChanged), [&](int index) {
+        activePIDIndex = index;
+        paramsPanel->setParams(pids[activePIDIndex].params());
+        window.setWindowTitle(QString("PID Sim — Editing #%1").arg(index));
+    });
+
+    QObject::connect(paramsPanel, &PidParamsPanel::paramsEdited, [&](const Params& p) {
+        pids[activePIDIndex].setParams(p);
+    });
+
+
 
     QElapsedTimer clock;
     clock.start();
