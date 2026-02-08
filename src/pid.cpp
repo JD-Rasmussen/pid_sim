@@ -17,7 +17,18 @@ void PID::reset() {
     first_ = true;
 }
 double PID::update(double PV, double dt) {
-    // Placeholder for PID update logic
+    proportional_ = params_.Kp * (params_.SP - PV); // P term
+    if (params_.Tn > 0.0) {
+        integral_ += (params_.SP - PV) * dt / params_.Tn; // I term
+    }
+    if (params_.Td > 0.0 && !first_ && (lastOutput_ <= params_.outputMax) && (lastOutput_ >= params_.outputMin)) {
+        derivative_ = (PV - (lastOutput_ - proportional_ - integral_)) / dt * params_.Td; // D term
+    } else {
+        derivative_ = 0.0;
+    }
+    lastOutput_ = proportional_ + integral_ + derivative_;
+    first_ = false; 
+    
     return lastOutput_;
 }
 
