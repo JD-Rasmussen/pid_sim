@@ -1,21 +1,21 @@
 - Project TODO list (structured)
 - Phase 0 – Project setup
-- [ ] Pick stack: C++ + Qt Widgets (or another GUI framework).
-- [ ] Create a new project and verify:
-- [ ] A window opens.
-- [ ] A timer ticks (e.g., prints to console every 100 ms).
+- [x] Pick stack: C++ + Qt Widgets (or another GUI framework).
+- [x] Create a new project and verify:
+- [x] A window opens.
+- [x] A timer ticks (e.g., prints to console every 100 ms).
 - Phase 1 – Core PID block
 - Goal: A reusable PID “function block” with no GUI.
 
 - [ ] Define a PIDController class:
-- [ ] Members: Kp, Ki, Kd, integral, prev_error, maybe output_min/max.
-- [ ] Constructor to set gains and limits.
-- [ ] reset() method (zero integral, prev_error).
-- [ ] update(setpoint, measurement, dt) method that returns control output.
-- [ ] Implement:
-- [ ] P term: Kp * error.
-- [ ] I term with anti‑windup (clamp integral or conditional integration).
-- [ ] D term, probably on measurement or error, with basic filtering if you like.
+- [x] Members: Kp, Ki, Kd, integral, prev_error, maybe output_min/max.
+- [x] Constructor to set gains and limits.
+- [x] reset() method (zero integral, prev_error).
+- [x] update(setpoint, measurement, dt) method that returns control output.
+- [x] Implement:
+- [x] P term: Kp * error.
+- [x] I term with anti‑windup (clamp integral or conditional integration).
+- [x] D term, probably on measurement or error, with basic filtering if you like.
 - [ ] Write a simple console test:
 - [ ] Step input + crude first‑order process model.
 - [ ] Print PV and controller output over time to confirm behavior makes sense.
@@ -42,11 +42,11 @@
 - Goal: Same logic as console, but user‑friendly.
 
 - [ ] GUI inputs:
-- [ ] Fields/spin boxes for Kp, Ki, Kd, setpoint.
-- [ ] Dropdown to select process model (heating vs tank, etc.).
+- [x] Fields/spin boxes for Kp, Ki, Kd, setpoint.
+- [x] Dropdown to select process model (heating vs tank, etc.).
 - [ ] Start/Stop/Reset buttons.
 - [ ] Simulation control:
-- [ ] Use a QTimer to call stepSimulation() at fixed dt.
+- [x] Use a QTimer to call stepSimulation() at fixed dt.
 - [ ] Each step:
 - [ ] Call PID.update(SP, PV, dt).
 - [ ] Call ProcessModel.update(output, dt).

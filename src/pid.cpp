@@ -1,4 +1,5 @@
 
+#include <algorithm>
 #include "pid.h"
 
 
@@ -26,7 +27,7 @@ double PID::update(double PV, double dt) {
     } else {
         derivative_ = 0.0;
     }
-    lastOutput_ = proportional_ + integral_ + derivative_;
+    lastOutput_ = std::max(params_.outputMin, std::min(params_.outputMax, proportional_ + integral_ + derivative_));
     first_ = false; 
     
     return lastOutput_;
