@@ -26,7 +26,7 @@ class PID{
 
     private:
         Params params_{};
-        double errorSum_{0.0};
+        double error_{0.0};
         double proportional_{0.0};
         double integral_{0.0};
         double derivative_{0.0};

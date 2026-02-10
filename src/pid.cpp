@@ -17,13 +17,15 @@ void PID::reset() {
     lastOutput_ = 0.0;
     first_ = true;
 }
-double PID::update(double PV, double dt) {
-    proportional_ = params_.Kp * (params_.SP - PV); // P term
+double PID::update(double PV, double dt) { // PV = process variable (current value), dt = time step in seconds
+    error_ = params_.SP - PV;
+
+    proportional_ = params_.Kp * error_; // P term
     if (params_.Tn > 0.0) {
-        integral_ += (params_.SP - PV) * dt / params_.Tn; // I term
+        integral_ += error_ * dt / params_.Tn; // I term where Tn is the integral time constant
     }
     if (params_.Td > 0.0 && !first_ && (lastOutput_ <= params_.outputMax) && (lastOutput_ >= params_.outputMin)) {
-        derivative_ = (PV - (lastOutput_ - proportional_ - integral_)) / dt * params_.Td; // D term
+        derivative_ = (PV - (lastOutput_ - proportional_ - integral_)) / dt * params_.Td; // D term where Td is the derivative time constant
     } else {
         derivative_ = 0.0;
     }

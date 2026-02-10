@@ -79,10 +79,10 @@ int main(int argc, char *argv[]) {
         accumulator += dt_real;
 
         int substeps = 0;
-        const int maxSubsteps = 5;   // safety guard
-        while (accumulator >= fixed_dt && substeps < maxSubsteps) {
-            for (auto& pid : pids) {
-                double pv = 0.0; // placeholder for actual PV when enviroment is added
+        const int maxSubsteps = NUM_PIDS+1;   // safety guard
+        while (accumulator >= fixed_dt && substeps < maxSubsteps) { 
+            for (auto& pid : pids) {   
+                double pv = 50.0; // placeholder for actual PV when enviroment is added
                 double u  = pid.update(pv, fixed_dt);
             // add output later
             }
