@@ -66,8 +66,8 @@ int main(int argc, char *argv[]) {
     QElapsedTimer clock;
     clock.start();
 
-    double accumulator = 0.0;
-    const double fixed_dt = 0.010;   // 10 ms “physics” step
+    float accumulator = 0.0;
+    const float fixed_dt = 0.010;   // 10 ms “physics” step
 
     QTimer timer;
     timer.setTimerType(Qt::PreciseTimer);
@@ -82,8 +82,8 @@ int main(int argc, char *argv[]) {
         const int maxSubsteps = NUM_PIDS+1;   // safety guard
         while (accumulator >= fixed_dt && substeps < maxSubsteps) { 
             for (auto& pid : pids) {   
-                double pv = 50.0; // placeholder for actual PV when enviroment is added
-                double u  = pid.update(pv, fixed_dt);
+                float pv = 50.0; // placeholder for actual PV when enviroment is added
+                float u  = pid.update(pv, fixed_dt);
             // add output later
             }
 

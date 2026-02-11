@@ -17,7 +17,7 @@ void PID::reset() {
     lastOutput_ = 0.0;
     first_ = true;
 }
-double PID::update(double PV, double dt) { // PV = process variable (current value), dt = time step in seconds
+float PID::update(float PV, float dt) { // PV = process variable (current value), dt = time step in seconds
     error_ = params_.SP - PV;
 
     proportional_ = params_.Kp * error_; // P term

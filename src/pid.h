@@ -1,13 +1,13 @@
 #pragma once
 
 struct Params{
-    double SP{0.0};
- //   double PV{0.0};
-    double Kp{1.0};
-    double Tn{0.0}; 
-    double Td{0.0};
-    double outputMin{0.0}; 
-    double outputMax{0.0};
+    float SP{0.0};
+ //   float PV{0.0};
+    float Kp{1.0};
+    float Tn{0.0}; 
+    float Td{0.0};
+    float outputMin{0.0}; 
+    float outputMax{0.0};
 };
 
 class PID{
@@ -22,15 +22,15 @@ class PID{
         Params params() const;
         
         void reset();
-        double update(double PV, double dt);
+        float update(float PV, float dt);
 
     private:
         Params params_{};
-        double error_{0.0};
-        double proportional_{0.0};
-        double integral_{0.0};
-        double derivative_{0.0};
-        double lastOutput_{0.0};
+        float error_{0.0};
+        float proportional_{0.0};
+        float integral_{0.0};
+        float derivative_{0.0};
+        float lastOutput_{0.0};
         bool first_{true};
 
 };
