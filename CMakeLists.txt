@@ -13,6 +13,7 @@ add_executable(pidsim
     src/pid.cpp
     src/PIDUI.h
     src/PIDUI.cpp
-)
+    src/testpid.cpp
+    )
 
 target_link_libraries(pidsim PRIVATE Qt5::Widgets)
