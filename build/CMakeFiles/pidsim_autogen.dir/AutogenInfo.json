@@ -64,7 +64,24 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
-		"/usr/share/cmake-3.28/Modules/CMakeParseArguments.cmake"
+		"/usr/share/cmake-3.28/Modules/CMakeParseArguments.cmake",
+		"/usr/share/cmake-3.28/Modules/FindGTest.cmake",
+		"/usr/share/cmake-3.28/Modules/GoogleTest.cmake",
+		"/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake",
+		"/usr/share/cmake-3.28/Modules/FindThreads.cmake",
+		"/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake",
+		"/usr/share/cmake-3.28/Modules/CheckIncludeFileCXX.cmake",
+		"/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake",
+		"/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake",
+		"/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake",
+		"/usr/share/cmake-3.28/Modules/GoogleTest.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim",
 	"DEP_FILE" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/deps",
@@ -97,6 +114,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src",
 		"/usr/include/x86_64-linux-gnu/qt5",
 		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
@@ -116,7 +134,7 @@
 	"MOC_PREDEFS_CMD" : 
 	[
 		"/usr/bin/c++",
-		"-std=gnu++17",
+		"-std=gnu++20",
 		"-dM",
 		"-E",
 		"-c",
@@ -124,7 +142,11 @@
 	],
 	"MOC_PREDEFS_FILE" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
-	"MOC_SKIP" : [],
+	"MOC_SKIP" : 
+	[
+		"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_lib_autogen/mocs_compilation.cpp",
+		"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests_autogen/mocs_compilation.cpp"
+	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 1,
 	"PARSE_CACHE_FILE" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim_autogen.dir/ParseCache.txt",

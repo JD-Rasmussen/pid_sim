@@ -344,6 +344,10 @@ pidsim_autogen/timestamp: \
 	/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
 	/usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
 	/usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
+	/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake \
@@ -385,15 +389,25 @@ pidsim_autogen/timestamp: \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake \
+	/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeParseArguments.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake \
 	/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake \
+	/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake \
+	/usr/share/cmake-3.28/Modules/CheckIncludeFileCXX.cmake \
+	/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake \
 	/usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
 	/usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake \
 	/usr/share/cmake-3.28/Modules/Compiler/GNU.cmake \
+	/usr/share/cmake-3.28/Modules/FindGTest.cmake \
+	/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake \
+	/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake \
+	/usr/share/cmake-3.28/Modules/FindThreads.cmake \
+	/usr/share/cmake-3.28/Modules/GoogleTest.cmake \
+	/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake \
 	/usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake \
 	/usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake \
 	/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake \

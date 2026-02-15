@@ -10,6 +10,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/CMakeLists.txt"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake"
@@ -51,15 +55,25 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake"
+  "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeParseArguments.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake"
+  "/usr/share/cmake-3.28/Modules/CheckIncludeFileCXX.cmake"
+  "/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake"
   "/usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-3.28/Modules/Compiler/GNU.cmake"
+  "/usr/share/cmake-3.28/Modules/FindGTest.cmake"
+  "/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
+  "/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
+  "/usr/share/cmake-3.28/Modules/FindThreads.cmake"
+  "/usr/share/cmake-3.28/Modules/GoogleTest.cmake"
+  "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake"
   "/usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake"
@@ -75,13 +89,21 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "CMakeFiles/pid_lib_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/pid_tests_autogen.dir/AutogenInfo.json"
   "CMakeFiles/pidsim_autogen.dir/AutogenInfo.json"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/pid_lib.dir/DependInfo.cmake"
+  "CMakeFiles/pid_tests.dir/DependInfo.cmake"
   "CMakeFiles/pidsim.dir/DependInfo.cmake"
+  "CMakeFiles/pid_lib_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "CMakeFiles/pid_lib_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/pid_tests_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "CMakeFiles/pid_tests_autogen.dir/DependInfo.cmake"
   "CMakeFiles/pidsim_autogen_timestamp_deps.dir/DependInfo.cmake"
   "CMakeFiles/pidsim_autogen.dir/DependInfo.cmake"
   )

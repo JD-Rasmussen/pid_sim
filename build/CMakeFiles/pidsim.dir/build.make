@@ -146,6 +146,7 @@ pidsim: CMakeFiles/pidsim.dir/src/main.cpp.o
 pidsim: CMakeFiles/pidsim.dir/src/pid.cpp.o
 pidsim: CMakeFiles/pidsim.dir/src/PIDUI.cpp.o
 pidsim: CMakeFiles/pidsim.dir/build.make
+pidsim: libpid_lib.a
 pidsim: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 pidsim: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 pidsim: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13

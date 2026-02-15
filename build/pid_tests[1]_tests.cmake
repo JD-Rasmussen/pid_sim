@@ -1,0 +1,7 @@
+add_test([=[PID.ProportionalOnlyAndClamp]=]  /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests [==[--gtest_filter=PID.ProportionalOnlyAndClamp]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[PID.ProportionalOnlyAndClamp]=]  PROPERTIES WORKING_DIRECTORY /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[PID.IntegralAfterTnApproxEqualsP]=]  /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests [==[--gtest_filter=PID.IntegralAfterTnApproxEqualsP]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[PID.IntegralAfterTnApproxEqualsP]=]  PROPERTIES WORKING_DIRECTORY /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[PID.DtInvarianceSameTotalTimeSameOutput]=]  /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests [==[--gtest_filter=PID.DtInvarianceSameTotalTimeSameOutput]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[PID.DtInvarianceSameTotalTimeSameOutput]=]  PROPERTIES WORKING_DIRECTORY /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  pid_tests_TESTS PID.ProportionalOnlyAndClamp PID.IntegralAfterTnApproxEqualsP PID.DtInvarianceSameTotalTimeSameOutput)

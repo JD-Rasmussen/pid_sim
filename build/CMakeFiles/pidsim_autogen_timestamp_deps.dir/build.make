@@ -67,6 +67,7 @@ include CMakeFiles/pidsim_autogen_timestamp_deps.dir/compiler_depend.make
 include CMakeFiles/pidsim_autogen_timestamp_deps.dir/progress.make
 
 CMakeFiles/pidsim_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
+CMakeFiles/pidsim_autogen_timestamp_deps: libpid_lib.a
 CMakeFiles/pidsim_autogen_timestamp_deps: /usr/lib/qt5/bin/moc
 
 pidsim_autogen_timestamp_deps: CMakeFiles/pidsim_autogen_timestamp_deps

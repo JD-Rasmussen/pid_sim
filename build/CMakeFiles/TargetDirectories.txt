@@ -1,5 +1,12 @@
+/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pid_lib.dir
+/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pid_tests.dir
 /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim.dir
+/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/test.dir
 /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/edit_cache.dir
 /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/rebuild_cache.dir
+/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pid_lib_autogen_timestamp_deps.dir
+/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pid_lib_autogen.dir
+/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pid_tests_autogen_timestamp_deps.dir
+/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pid_tests_autogen.dir
 /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim_autogen_timestamp_deps.dir
 /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim_autogen.dir

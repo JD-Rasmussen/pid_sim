@@ -274,3 +274,42 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:99 (CHECK_CXX_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake:39 (find_dependency)"
+      - "/usr/share/cmake-3.28/Modules/FindGTest.cmake:194 (find_package)"
+      - "CMakeLists.txt:11 (find_package)"
+    directories:
+      source: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/CMakeScratch/TryCompile-s5lNhM"
+      binary: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/CMakeScratch/TryCompile-s5lNhM"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/CMakeScratch/TryCompile-s5lNhM'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4731d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4731d.dir/build.make CMakeFiles/cmTC_4731d.dir/build
+        gmake[1]: Entering directory '/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/CMakeScratch/TryCompile-s5lNhM'
+        Building CXX object CMakeFiles/cmTC_4731d.dir/src.cxx.o
+        /usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++20 -o CMakeFiles/cmTC_4731d.dir/src.cxx.o -c /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/CMakeScratch/TryCompile-s5lNhM/src.cxx
+        Linking CXX executable cmTC_4731d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4731d.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_4731d.dir/src.cxx.o -o cmTC_4731d 
+        gmake[1]: Leaving directory '/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/CMakeScratch/TryCompile-s5lNhM'
+        
+      exitCode: 0
+...

@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -117,6 +127,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named pid_lib
+
+# Build rule for target.
+pid_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pid_lib
+.PHONY : pid_lib
+
+# fast build rule for target.
+pid_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_lib.dir/build.make CMakeFiles/pid_lib.dir/build
+.PHONY : pid_lib/fast
+
+#=============================================================================
+# Target rules for targets named pid_tests
+
+# Build rule for target.
+pid_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pid_tests
+.PHONY : pid_tests
+
+# fast build rule for target.
+pid_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_tests.dir/build.make CMakeFiles/pid_tests.dir/build
+.PHONY : pid_tests/fast
+
+#=============================================================================
 # Target rules for targets named pidsim
 
 # Build rule for target.
@@ -128,6 +164,58 @@ pidsim: cmake_check_build_system
 pidsim/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/build
 .PHONY : pidsim/fast
+
+#=============================================================================
+# Target rules for targets named pid_lib_autogen_timestamp_deps
+
+# Build rule for target.
+pid_lib_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pid_lib_autogen_timestamp_deps
+.PHONY : pid_lib_autogen_timestamp_deps
+
+# fast build rule for target.
+pid_lib_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_lib_autogen_timestamp_deps.dir/build.make CMakeFiles/pid_lib_autogen_timestamp_deps.dir/build
+.PHONY : pid_lib_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named pid_lib_autogen
+
+# Build rule for target.
+pid_lib_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pid_lib_autogen
+.PHONY : pid_lib_autogen
+
+# fast build rule for target.
+pid_lib_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_lib_autogen.dir/build.make CMakeFiles/pid_lib_autogen.dir/build
+.PHONY : pid_lib_autogen/fast
+
+#=============================================================================
+# Target rules for targets named pid_tests_autogen_timestamp_deps
+
+# Build rule for target.
+pid_tests_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pid_tests_autogen_timestamp_deps
+.PHONY : pid_tests_autogen_timestamp_deps
+
+# fast build rule for target.
+pid_tests_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_tests_autogen_timestamp_deps.dir/build.make CMakeFiles/pid_tests_autogen_timestamp_deps.dir/build
+.PHONY : pid_tests_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named pid_tests_autogen
+
+# Build rule for target.
+pid_tests_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pid_tests_autogen
+.PHONY : pid_tests_autogen
+
+# fast build rule for target.
+pid_tests_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_tests_autogen.dir/build.make CMakeFiles/pid_tests_autogen.dir/build
+.PHONY : pid_tests_autogen/fast
 
 #=============================================================================
 # Target rules for targets named pidsim_autogen_timestamp_deps
@@ -154,6 +242,54 @@ pidsim_autogen: cmake_check_build_system
 pidsim_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim_autogen.dir/build.make CMakeFiles/pidsim_autogen.dir/build
 .PHONY : pidsim_autogen/fast
+
+pid_lib_autogen/mocs_compilation.o: pid_lib_autogen/mocs_compilation.cpp.o
+.PHONY : pid_lib_autogen/mocs_compilation.o
+
+# target to build an object file
+pid_lib_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_lib.dir/build.make CMakeFiles/pid_lib.dir/pid_lib_autogen/mocs_compilation.cpp.o
+.PHONY : pid_lib_autogen/mocs_compilation.cpp.o
+
+pid_lib_autogen/mocs_compilation.i: pid_lib_autogen/mocs_compilation.cpp.i
+.PHONY : pid_lib_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+pid_lib_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_lib.dir/build.make CMakeFiles/pid_lib.dir/pid_lib_autogen/mocs_compilation.cpp.i
+.PHONY : pid_lib_autogen/mocs_compilation.cpp.i
+
+pid_lib_autogen/mocs_compilation.s: pid_lib_autogen/mocs_compilation.cpp.s
+.PHONY : pid_lib_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+pid_lib_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_lib.dir/build.make CMakeFiles/pid_lib.dir/pid_lib_autogen/mocs_compilation.cpp.s
+.PHONY : pid_lib_autogen/mocs_compilation.cpp.s
+
+pid_tests_autogen/mocs_compilation.o: pid_tests_autogen/mocs_compilation.cpp.o
+.PHONY : pid_tests_autogen/mocs_compilation.o
+
+# target to build an object file
+pid_tests_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_tests.dir/build.make CMakeFiles/pid_tests.dir/pid_tests_autogen/mocs_compilation.cpp.o
+.PHONY : pid_tests_autogen/mocs_compilation.cpp.o
+
+pid_tests_autogen/mocs_compilation.i: pid_tests_autogen/mocs_compilation.cpp.i
+.PHONY : pid_tests_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+pid_tests_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_tests.dir/build.make CMakeFiles/pid_tests.dir/pid_tests_autogen/mocs_compilation.cpp.i
+.PHONY : pid_tests_autogen/mocs_compilation.cpp.i
+
+pid_tests_autogen/mocs_compilation.s: pid_tests_autogen/mocs_compilation.cpp.s
+.PHONY : pid_tests_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+pid_tests_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_tests.dir/build.make CMakeFiles/pid_tests.dir/pid_tests_autogen/mocs_compilation.cpp.s
+.PHONY : pid_tests_autogen/mocs_compilation.cpp.s
 
 pidsim_autogen/mocs_compilation.o: pidsim_autogen/mocs_compilation.cpp.o
 .PHONY : pidsim_autogen/mocs_compilation.o
@@ -232,6 +368,7 @@ src/pid.o: src/pid.cpp.o
 
 # target to build an object file
 src/pid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_lib.dir/build.make CMakeFiles/pid_lib.dir/src/pid.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/pid.cpp.o
 .PHONY : src/pid.cpp.o
 
@@ -240,6 +377,7 @@ src/pid.i: src/pid.cpp.i
 
 # target to preprocess a source file
 src/pid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_lib.dir/build.make CMakeFiles/pid_lib.dir/src/pid.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/pid.cpp.i
 .PHONY : src/pid.cpp.i
 
@@ -248,8 +386,33 @@ src/pid.s: src/pid.cpp.s
 
 # target to generate assembly for a file
 src/pid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_lib.dir/build.make CMakeFiles/pid_lib.dir/src/pid.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/pid.cpp.s
 .PHONY : src/pid.cpp.s
+
+tests/test_pid.o: tests/test_pid.cpp.o
+.PHONY : tests/test_pid.o
+
+# target to build an object file
+tests/test_pid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_tests.dir/build.make CMakeFiles/pid_tests.dir/tests/test_pid.cpp.o
+.PHONY : tests/test_pid.cpp.o
+
+tests/test_pid.i: tests/test_pid.cpp.i
+.PHONY : tests/test_pid.i
+
+# target to preprocess a source file
+tests/test_pid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_tests.dir/build.make CMakeFiles/pid_tests.dir/tests/test_pid.cpp.i
+.PHONY : tests/test_pid.cpp.i
+
+tests/test_pid.s: tests/test_pid.cpp.s
+.PHONY : tests/test_pid.s
+
+# target to generate assembly for a file
+tests/test_pid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_tests.dir/build.make CMakeFiles/pid_tests.dir/tests/test_pid.cpp.s
+.PHONY : tests/test_pid.cpp.s
 
 # Help Target
 help:
@@ -259,9 +422,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
+	@echo "... pid_lib_autogen"
+	@echo "... pid_lib_autogen_timestamp_deps"
+	@echo "... pid_tests_autogen"
+	@echo "... pid_tests_autogen_timestamp_deps"
 	@echo "... pidsim_autogen"
 	@echo "... pidsim_autogen_timestamp_deps"
+	@echo "... pid_lib"
+	@echo "... pid_tests"
 	@echo "... pidsim"
+	@echo "... pid_lib_autogen/mocs_compilation.o"
+	@echo "... pid_lib_autogen/mocs_compilation.i"
+	@echo "... pid_lib_autogen/mocs_compilation.s"
+	@echo "... pid_tests_autogen/mocs_compilation.o"
+	@echo "... pid_tests_autogen/mocs_compilation.i"
+	@echo "... pid_tests_autogen/mocs_compilation.s"
 	@echo "... pidsim_autogen/mocs_compilation.o"
 	@echo "... pidsim_autogen/mocs_compilation.i"
 	@echo "... pidsim_autogen/mocs_compilation.s"
@@ -274,6 +450,9 @@ help:
 	@echo "... src/pid.o"
 	@echo "... src/pid.i"
 	@echo "... src/pid.s"
+	@echo "... tests/test_pid.o"
+	@echo "... tests/test_pid.i"
+	@echo "... tests/test_pid.s"
 .PHONY : help
 
 

@@ -1,0 +1,5 @@
+if(EXISTS "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests[1]_tests.cmake")
+  include("/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests[1]_tests.cmake")
+else()
+  add_test(pid_tests_NOT_BUILT pid_tests_NOT_BUILT)
+endif()
