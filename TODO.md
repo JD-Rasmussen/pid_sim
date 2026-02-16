@@ -16,29 +16,39 @@
 - [x] P term: Kp * error.
 - [x] I term with anti‑windup (clamp integral or conditional integration).
 - [x] D term, probably on measurement or error, with basic filtering if you like.
-- [ ] Write a simple console test:
-- [ ] Step input + crude first‑order process model.
-- [ ] Print PV and controller output over time to confirm behavior makes sense.
-- Phase 2 – Simulation environment(s)
-- Goal: A small “process library” you can plug the PID into.
+- [x] implement gTest
+- [x] test that P is correct
+- [x] test that I is correct
+- [x] test that D is correct
+- [x] test limits
 
-- Start with 1–2 simple models; you can add more later.
+- Goal: process model
 
-- [ ] Create a ProcessModel interface / base:
-- e.g. double update(double input, double dt) → returns new PV.
-- [ ] Implement heating scenario:
-- [ ] State: temperature.
-- [ ] Parameters: ambient temp, heater gain, time constant, losses.
-- [ ] update() equation (simple first‑order or integrator).
-- [ ] Implement tank level/flow scenario:
-- [ ] State: level.
-- [ ] Parameters: tank area, inflow (from controller), outflow (maybe proportional to level).
-- [ ] Basic integrator model: level += (inflow - outflow) * dt.
-- [ ] Write another console harness:
-- [ ] Choose a model.
-- [ ] Run PID + process loop, log PV, SP, and output.
-- [ ] Adjust gains manually and see qualitative differences.
-- Phase 3 – Basic GUI (numeric + simple 2D)
+- [ ] Create a ProcessModel interface / base object:
+- [ ] it should return a PV take
+- [ ] host sub models that simulate behaivoure
+- [ ] selection of sub models
+- [ ] water tank level, with variable tank size and varying water consumption
+
+
+- [ ] second sub module
+- [ ] steel plate being heated
+- [ ] variable heating element size
+- [ ] variable steel plate size and heat spread
+- [ ] variable insulation level of the plate, or some other way to simulate disturbances in the process
+
+
+
+
+
+
+
+
+
+
+
+
+
 - Goal: Same logic as console, but user‑friendly.
 
 - [ ] GUI inputs:
@@ -55,7 +65,7 @@
 - [ ] For tank: draw rectangle + fill height proportional to level.
 - [ ] For heater: draw a block whose color depends on temperature.
 - [ ] Trigger repaint on each timer tick.
-- Phase 4 – “Advanced” control features
+
 - Goal: Richer control structures once basics work.
 
 - 4.1 Cascade control
@@ -76,8 +86,6 @@
 - [ ] Enable/disable feedforward.
 - [ ] Adjust FF gain.
 - [ ] Trigger disturbance events and visualize effect.
-- Phase 5 – Measurement filtering & “ugly” processes
-- Goal: More realistic, noisy/jittery signals.
 
 - 5.1 Input filtering
 - [ ] Implement a simple filter block:
