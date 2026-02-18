@@ -8,12 +8,10 @@
 class ProcessModel{
 
     public:
-        ProcessModel() = default;
-        explicit ProcessModel();
 
-        void setParams();
-        void reset();
-        float update(float *u, float *dt);
+        virtual void setParams();
+        virtual void reset();
+        virtual float update(float *u, float *dt);
 
     private:
         float PV_; // Process Variable returned by the model
@@ -25,16 +23,15 @@ class ProcessModel{
 class WaterTank : public ProcessModel {
 
     public:
-        WaterTank() = default;
-        explicit WaterTank();
 
-        void setParams(float area, float outflowCoeff);
-        void reset();
-        float update(float *u, float *dt);
+        void setParams(float area, float outflowCoeff)  ;
+        void reset() override;
+        float update(float *u, float *dt) override;
 
     private:
         float area_; // cross-sectional area of the tank
         float Inflow_; // cross-sectional area of the tank
         float outflowCoeff_; // coefficient for outflow (e.g., due to gravity)
         float WaterLevel_; // current water level in the tank
+        float volume_; // current volume of water in the tank
 };
