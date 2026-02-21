@@ -21,7 +21,18 @@ void WaterTank::reset() {
 float WaterTank::update(float *u, float *dt) {
     float inflow = std::min(maxInflow_, std::max(0.0f, *u)); // inflow rate (e.g., liters per second)
     
-    float outflow = maxOutflow_*0.5f; // outflow proportional to current level (e.g., due to gravity)
+    if (outflow >= maxOutflow_) {
+        rampUp_ = false;
+        outflow = maxOutflow_;
+    } else if (outflow <= 0.0f) {
+        rampUp_ = true;
+        outflow = 0.0f;
+    };
+     if (rampUp_) {
+        outflow += 0.1f; // ramp up outflow at 10 liters per second²
+    } else {
+        outflow -= 0.1f; // ramp down outflow at 10 liters per second²
+    };
 
     float dVolume = (inflow - outflow * 0.001f) * (*dt); // change in volume liters = (inflow - outflow) * time step in seconds
     WaterLevel_ += dVolume; // update water level in liters
