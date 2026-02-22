@@ -36,5 +36,6 @@ class WaterTank : public ProcessModel {
         float height_; // height of the tank in millimeters
         float volume_; // liters = area * height * 0.001 (to convert mm³ to liters)
         bool rampUp_; // flag to indicate if the outfor is ramping up or down
-        float outflow; // current outflow rate in liters per minute
+        float outflow; // current outflow rate in liters per dt
+        float inflow; // current inflow rate in liters per dt
 };
