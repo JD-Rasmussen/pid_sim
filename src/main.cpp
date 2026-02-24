@@ -11,6 +11,13 @@
 #include "pid.h"
 #include "PIDUI.h"
 
+//consider changing to a more robust event loop with std::chrono and std::thread for the physics update.
+//std::shared_ptrstd::unique_ptr
+//std::chrono::duration
+//std::chrono::steady_clockstd::chono::system_clockstd::chrono::high_precision
+
+
+
 
 
 int main(int argc, char *argv[]) {
@@ -91,7 +98,7 @@ int main(int argc, char *argv[]) {
             accumulator -= fixed_dt;
             ++substeps;
         }
-        label->setText(QString("Tick: %1").arg(tickCount));
+        label->setText(QString("Tick: %1").arg(dt_real));
     });
     window.show();
     return app.exec();
