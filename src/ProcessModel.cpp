@@ -13,7 +13,6 @@ void WaterTank::setParams(float radius, float height, float maxInflow, float max
     volume_ = area_ * height_; // V = A * h
     reset();
 }
-
 void WaterTank::reset() {
     PV_ = 0.0f; // start empty
 }
@@ -28,23 +27,26 @@ float WaterTank::update(float *u, float *dt) {
         outflow = 0.0f;
     };
      if (rampUp_) {
-        outflow += 0.1f; // ramp up outflow at 10 liters per second²
+        outflow += 0.1f; // ramp up outflow, liters per second
     } else {
-        outflow -= 0.1f; // ramp down outflow at 10 liters per second²
+        outflow -= 0.1f; // ramp down outflow, liters per second
     };
 
 // Inflow is scaled based on the control input u.
     if (*u > 0.0f) {
         inflow = maxInflow_/(*u)*100.0f; // scale inflow to percentage of max inflow
     }
-    inflow = std::min(maxInflow_, std::max(0.0f, inflow)); // ensure inflow is within bounds
+    inflow = std::clamp(*u, 0.0f, maxInflow_); // ensure inflow is within bounds
 
-    float dVolume = (inflow - outflow * 0.001f) * (*dt); // change in volume liters = (inflow - outflow) * time step in seconds
-    WaterLevel_ += dVolume; // update water level in liters
-    if (PV_ <= 0.0f && dVolume < 0.0f) {
-        PV_ += (dVolume / volume_) * height_; // update water level in mm based on volume change
-        PV_ = std::max(0.0f, std::min(height_, PV_)); // prevent negative water level and ensure it doesn't exceed tank height
-    };
+    float dVolume = (inflow - outflow) * (*dt); // change in volume liters = (inflow - outflow) * time step in seconds
+    WaterLevel_ = std::clamp(WaterLevel_ + dVolume, 0.0f, volume_); // keep within 
+
+    if (height_ > 0.0f && volume_ > 0.0f) {
+        PV_ = (WaterLevel_ / volume_) * height_;     // mm
+        PV_ = std::clamp(PV_, 0.0f, height_);
+    } else {
+        PV_ = 0.0f;
+    }
 
     return PV_;
 }
