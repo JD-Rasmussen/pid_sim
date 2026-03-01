@@ -9,7 +9,10 @@ set(CMAKE_AUTOMOC ON)
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 
-add_library(pid_lib src/pid.cpp)
+add_library(pid_lib 
+    src/pid.cpp
+    src/ProcessModel.cpp
+    src/)
 
 target_include_directories(pid_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
@@ -18,10 +21,14 @@ find_package(GTest REQUIRED)
 enable_testing()
 
 #tests for pid
-add_executable(pid_tests tests/test_pid.cpp)
+add_executable(pid_tests 
+    tests/test_pid.cpp
+    tests/test_ProcessModel.cpp)
 target_link_libraries(pid_tests PRIVATE pid_lib GTest::gtest_main)
 include(GoogleTest)
 gtest_discover_tests(pid_tests)
+
+
 
 
 # Main application Qt GUI
@@ -31,6 +38,8 @@ add_executable(pidsim
     src/pid.cpp
     src/PIDUI.h
     src/PIDUI.cpp
+    src/ProcessModel.h
+    src/ProcessModel.cpp
     )
 
 target_link_libraries(pidsim PRIVATE pid_lib Qt5::Widgets)

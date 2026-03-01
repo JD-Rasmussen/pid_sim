@@ -1,4 +1,4 @@
-PID.ProportionalOnlyAndClamp 2 0.00116558
-PID.IntegralAfterTnApproxEqualsP 1 0.00189099
-PID.DtInvarianceSameTotalTimeSameOutput 2 0.00100029
+PID.ProportionalOnlyAndClamp 3 0.00121727
+PID.IntegralAfterTnApproxEqualsP 2 0.00126241
+PID.DtInvarianceSameTotalTimeSameOutput 3 0.000636802
 ---

@@ -339,6 +339,33 @@ src/PIDUI.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/PIDUI.cpp.s
 .PHONY : src/PIDUI.cpp.s
 
+src/ProcessModel.o: src/ProcessModel.cpp.o
+.PHONY : src/ProcessModel.o
+
+# target to build an object file
+src/ProcessModel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_lib.dir/build.make CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/ProcessModel.cpp.o
+.PHONY : src/ProcessModel.cpp.o
+
+src/ProcessModel.i: src/ProcessModel.cpp.i
+.PHONY : src/ProcessModel.i
+
+# target to preprocess a source file
+src/ProcessModel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_lib.dir/build.make CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/ProcessModel.cpp.i
+.PHONY : src/ProcessModel.cpp.i
+
+src/ProcessModel.s: src/ProcessModel.cpp.s
+.PHONY : src/ProcessModel.s
+
+# target to generate assembly for a file
+src/ProcessModel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_lib.dir/build.make CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/ProcessModel.cpp.s
+.PHONY : src/ProcessModel.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -389,6 +416,30 @@ src/pid.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_lib.dir/build.make CMakeFiles/pid_lib.dir/src/pid.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/pid.cpp.s
 .PHONY : src/pid.cpp.s
+
+tests/test_ProcessModel.o: tests/test_ProcessModel.cpp.o
+.PHONY : tests/test_ProcessModel.o
+
+# target to build an object file
+tests/test_ProcessModel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_tests.dir/build.make CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.o
+.PHONY : tests/test_ProcessModel.cpp.o
+
+tests/test_ProcessModel.i: tests/test_ProcessModel.cpp.i
+.PHONY : tests/test_ProcessModel.i
+
+# target to preprocess a source file
+tests/test_ProcessModel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_tests.dir/build.make CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.i
+.PHONY : tests/test_ProcessModel.cpp.i
+
+tests/test_ProcessModel.s: tests/test_ProcessModel.cpp.s
+.PHONY : tests/test_ProcessModel.s
+
+# target to generate assembly for a file
+tests/test_ProcessModel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_tests.dir/build.make CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.s
+.PHONY : tests/test_ProcessModel.cpp.s
 
 tests/test_pid.o: tests/test_pid.cpp.o
 .PHONY : tests/test_pid.o
@@ -444,12 +495,18 @@ help:
 	@echo "... src/PIDUI.o"
 	@echo "... src/PIDUI.i"
 	@echo "... src/PIDUI.s"
+	@echo "... src/ProcessModel.o"
+	@echo "... src/ProcessModel.i"
+	@echo "... src/ProcessModel.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/pid.o"
 	@echo "... src/pid.i"
 	@echo "... src/pid.s"
+	@echo "... tests/test_ProcessModel.o"
+	@echo "... tests/test_ProcessModel.i"
+	@echo "... tests/test_ProcessModel.s"
 	@echo "... tests/test_pid.o"
 	@echo "... tests/test_pid.i"
 	@echo "... tests/test_pid.s"

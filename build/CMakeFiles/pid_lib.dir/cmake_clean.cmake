@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "pid_lib_autogen"
   "CMakeFiles/pid_lib.dir/pid_lib_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/pid_lib.dir/pid_lib_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.o"
+  "CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.o.d"
   "CMakeFiles/pid_lib.dir/src/pid.cpp.o"
   "CMakeFiles/pid_lib.dir/src/pid.cpp.o.d"
   "libpid_lib.a"

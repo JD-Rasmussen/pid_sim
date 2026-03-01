@@ -6,10 +6,11 @@
 class ProcessModel{
 
     public:
+    virtual ~ProcessModel();
 
-        virtual void reset();
-        virtual float update(float *u, float *dt);
-
+        virtual void reset() =0;
+        virtual float update(float *u, float *dt) = 0;
+        
     private:
         float PV_; // Process Variable returned by the model
 

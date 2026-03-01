@@ -103,19 +103,35 @@ CMakeFiles/pid_lib.dir/src/pid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pid_lib.dir/src/pid.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.cpp -o CMakeFiles/pid_lib.dir/src/pid.cpp.s
 
+CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.o: CMakeFiles/pid_lib.dir/flags.make
+CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.o: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.cpp
+CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.o: CMakeFiles/pid_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.o -MF CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.o.d -o CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.o -c /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.cpp
+
+CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.cpp > CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.i
+
+CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.cpp -o CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.s
+
 # Object files for target pid_lib
 pid_lib_OBJECTS = \
 "CMakeFiles/pid_lib.dir/pid_lib_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/pid_lib.dir/src/pid.cpp.o"
+"CMakeFiles/pid_lib.dir/src/pid.cpp.o" \
+"CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.o"
 
 # External object files for target pid_lib
 pid_lib_EXTERNAL_OBJECTS =
 
 libpid_lib.a: CMakeFiles/pid_lib.dir/pid_lib_autogen/mocs_compilation.cpp.o
 libpid_lib.a: CMakeFiles/pid_lib.dir/src/pid.cpp.o
+libpid_lib.a: CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.o
 libpid_lib.a: CMakeFiles/pid_lib.dir/build.make
 libpid_lib.a: CMakeFiles/pid_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libpid_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libpid_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/pid_lib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pid_lib.dir/link.txt --verbose=$(VERBOSE)
 

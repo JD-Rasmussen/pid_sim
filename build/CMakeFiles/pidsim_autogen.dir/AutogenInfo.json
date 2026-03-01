@@ -95,6 +95,12 @@
 			null
 		],
 		[
+			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.h",
+			"Mu",
+			"UVLADIE3JM/moc_ProcessModel.cpp",
+			null
+		],
+		[
 			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.h",
 			"Mu",
 			"UVLADIE3JM/moc_pid.cpp",
@@ -159,6 +165,11 @@
 	[
 		[
 			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.cpp",
 			"Mu",
 			null
 		],

@@ -89,6 +89,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.h",
+			"Mu",
+			"UVLADIE3JM/moc_ProcessModel.cpp",
+			null
+		],
+		[
 			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.h",
 			"Mu",
 			"UVLADIE3JM/moc_pid.cpp",
@@ -142,6 +148,11 @@
 	"SETTINGS_FILE" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pid_lib_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.cpp",
+			"Mu",
+			null
+		],
 		[
 			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.cpp",
 			"Mu",

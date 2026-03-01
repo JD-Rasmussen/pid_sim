@@ -103,22 +103,38 @@ CMakeFiles/pid_tests.dir/tests/test_pid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pid_tests.dir/tests/test_pid.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/tests/test_pid.cpp -o CMakeFiles/pid_tests.dir/tests/test_pid.cpp.s
 
+CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.o: CMakeFiles/pid_tests.dir/flags.make
+CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.o: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/tests/test_ProcessModel.cpp
+CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.o: CMakeFiles/pid_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.o -MF CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.o.d -o CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.o -c /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/tests/test_ProcessModel.cpp
+
+CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/tests/test_ProcessModel.cpp > CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.i
+
+CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/tests/test_ProcessModel.cpp -o CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.s
+
 # Object files for target pid_tests
 pid_tests_OBJECTS = \
 "CMakeFiles/pid_tests.dir/pid_tests_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/pid_tests.dir/tests/test_pid.cpp.o"
+"CMakeFiles/pid_tests.dir/tests/test_pid.cpp.o" \
+"CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.o"
 
 # External object files for target pid_tests
 pid_tests_EXTERNAL_OBJECTS =
 
 pid_tests: CMakeFiles/pid_tests.dir/pid_tests_autogen/mocs_compilation.cpp.o
 pid_tests: CMakeFiles/pid_tests.dir/tests/test_pid.cpp.o
+pid_tests: CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.o
 pid_tests: CMakeFiles/pid_tests.dir/build.make
 pid_tests: libpid_lib.a
 pid_tests: /usr/lib/x86_64-linux-gnu/libgtest_main.a
 pid_tests: /usr/lib/x86_64-linux-gnu/libgtest.a
 pid_tests: CMakeFiles/pid_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable pid_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable pid_tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pid_tests.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/cmake -D TEST_TARGET=pid_tests -D TEST_EXECUTABLE=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=pid_tests_TESTS -D CTEST_FILE=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-3.28/Modules/GoogleTestAddTests.cmake
 

@@ -65,8 +65,9 @@ TEST(ProcessModel, WaterTankReset) {
     EXPECT_GT(PV, 0.0f); // Expect water level to increase from initial state
 
     // Now reset and check that the water level goes back to zero
+    float zero = 0.0f;
     wtank.reset();
-    PV = wtank.update(&u, &dt);
+    PV = wtank.update(&zero, &zero); // update with zero control input and zero time step to get current PV
     EXPECT_EQ(PV, 0.0f); // Expect water level to be reset to zero
 }
 
@@ -157,11 +158,17 @@ TEST(ProcessModel, WaterTankVolumeCalculation) {
     wtank.setParams(100.0f, 1000.0f, 100.0f, 80.0f);
     wtank.reset();
 
-    // Test that the volume is calculated correctly based on the area and height
-    float expectedVolume = (3.14159f * 100.0f * 100.0f) * 1000.0f * 0.001f; // area * height * conversion to liters
-    EXPECT_NEAR(wtank.update(&expectedVolume, &expectedVolume), expectedVolume, 1e-2f); // Expect PV to reflect volume calculation
+    const float u = 100.0f; //max inflow
+    const float dt = 0.1f; // time step in seconds
+    const int steps = 1000; // number of steps to simulate
+    float PV = 0.0f;
+    for (int i = 0; i < steps; ++i) {
+        float uu = u, dd = dt;
+        PV = wtank.update(&uu, &dd);
+        if (PV >= 1000.0f - 1e-3f) break; // stop if we reach the tank height
+    }
+    EXPECT_NEAR(PV, 1000.0f, 1e-3f); // Expect water level to be close to tank height at steady state with max inflow
 }
-
 TEST(ProcessModel, WaterTankInitialState) {
     WaterTank wtank;
     wtank.setParams(100.0f, 1000.0f, 100.0f, 80.0f);

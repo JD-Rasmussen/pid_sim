@@ -4,6 +4,8 @@
 
 
 
+ProcessModel::~ProcessModel() = default;
+
 void WaterTank::setParams(float radius, float height, float maxInflow, float maxOutflow) {
     radius_ = radius;
     height_ = height;
@@ -14,7 +16,12 @@ void WaterTank::setParams(float radius, float height, float maxInflow, float max
     reset();
 }
 void WaterTank::reset() {
-    PV_ = 0.0f; // start empty
+    PV_ = 0.0f; // start empty 
+    WaterLevel_ = 0.0f; 
+    inflow      = 0.0f;
+    outflow     = 0.0f;
+    rampUp_     = true;
+
 }
 
 float WaterTank::update(float *u, float *dt) {

@@ -4,6 +4,8 @@
 pid_lib_autogen/timestamp: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/CMakeLists.txt \
   CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
   CMakeFiles/3.28.3/CMakeSystem.cmake \
+  /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.cpp \
+  /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.h \
   /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.cpp \
   /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.h \
   /usr/bin/cmake \
@@ -79,6 +81,103 @@ pid_lib_autogen/timestamp: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_s
 
 CMakeFiles/pid_lib.dir/pid_lib_autogen/mocs_compilation.cpp.o: pid_lib_autogen/mocs_compilation.cpp \
   /usr/include/stdc-predef.h
+
+CMakeFiles/pid_lib.dir/src/ProcessModel.cpp.o: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.cpp \
+  /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.h \
+  /usr/include/alloca.h \
+  /usr/include/c++/13/algorithm \
+  /usr/include/c++/13/bit \
+  /usr/include/c++/13/bits/algorithmfwd.h \
+  /usr/include/c++/13/bits/concept_check.h \
+  /usr/include/c++/13/bits/cpp_type_traits.h \
+  /usr/include/c++/13/bits/exception.h \
+  /usr/include/c++/13/bits/exception_defines.h \
+  /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/invoke.h \
+  /usr/include/c++/13/bits/iterator_concepts.h \
+  /usr/include/c++/13/bits/max_size_type.h \
+  /usr/include/c++/13/bits/move.h \
+  /usr/include/c++/13/bits/predefined_ops.h \
+  /usr/include/c++/13/bits/ptr_traits.h \
+  /usr/include/c++/13/bits/ranges_algo.h \
+  /usr/include/c++/13/bits/ranges_algobase.h \
+  /usr/include/c++/13/bits/ranges_base.h \
+  /usr/include/c++/13/bits/ranges_cmp.h \
+  /usr/include/c++/13/bits/ranges_util.h \
+  /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/stl_algo.h \
+  /usr/include/c++/13/bits/stl_algobase.h \
+  /usr/include/c++/13/bits/stl_construct.h \
+  /usr/include/c++/13/bits/stl_heap.h \
+  /usr/include/c++/13/bits/stl_iterator.h \
+  /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/13/bits/stl_iterator_base_types.h \
+  /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_tempbuf.h \
+  /usr/include/c++/13/bits/uniform_int_dist.h \
+  /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/compare \
+  /usr/include/c++/13/concepts \
+  /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/debug/assertions.h \
+  /usr/include/c++/13/debug/debug.h \
+  /usr/include/c++/13/ext/numeric_traits.h \
+  /usr/include/c++/13/ext/type_traits.h \
+  /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/new \
+  /usr/include/c++/13/numbers \
+  /usr/include/c++/13/pstl/execution_defs.h \
+  /usr/include/c++/13/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/type_traits \
+  /usr/include/endian.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
 CMakeFiles/pid_lib.dir/src/pid.cpp.o: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.cpp \
   /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.h \
@@ -264,7 +363,15 @@ CMakeFiles/pid_lib.dir/src/pid.cpp.o: /home/angerbode/bootdev/github.com/jd-rasm
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake:
 
+/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.cpp:
+
 /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake:
+
+/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake:
 
 /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake:
 
@@ -276,16 +383,6 @@ CMakeFiles/pid_lib.dir/src/pid.cpp.o: /home/angerbode/bootdev/github.com/jd-rasm
 
 /usr/include/c++/13/type_traits:
 
-/usr/include/c++/13/numbers:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake:
-
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake:
-
 /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
 
 /usr/include/c++/13/bits/ptr_traits.h:
@@ -295,28 +392,6 @@ CMakeFiles/pid_lib.dir/src/pid.cpp.o: /home/angerbode/bootdev/github.com/jd-rasm
 /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake:
 
 /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake:
-
-CMakeFiles/3.28.3/CMakeSystem.cmake:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/CMakeLists.txt:
-
-pid_lib_autogen/mocs_compilation.cpp:
-
-/usr/include/c++/13/bits/move.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake:
-
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake:
 
 /usr/include/c++/13/bits/concept_check.h:
 
@@ -328,13 +403,45 @@ pid_lib_autogen/mocs_compilation.cpp:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake:
 
+/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.h:
+
 /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake:
 
+/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.h:
+
+/usr/include/c++/13/bits/stl_construct.h:
+
+CMakeFiles/3.28.3/CMakeSystem.cmake:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake:
+
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/CMakeLists.txt:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake:
+
+/usr/include/c++/13/bits/move.h:
+
+pid_lib_autogen/mocs_compilation.cpp:
+
+/usr/include/c++/13/numbers:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake:
 
 /usr/include/c++/13/bits/stl_iterator_base_funcs.h:
 
@@ -366,15 +473,11 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/include/c++/13/bits/stl_tempbuf.h:
 
-/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.h:
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
-/usr/include/c++/13/bits/stl_construct.h:
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake:
 
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake:
-
-/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake:
+/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake:
 
@@ -382,11 +485,21 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/include/c++/13/cstdlib:
 
+/usr/include/c++/13/bits/algorithmfwd.h:
+
+/usr/share/cmake-3.28/Modules/Compiler/GNU.cmake:
+
 /usr/share/cmake-3.28/Modules/FindGTest.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake:
+
+/usr/include/features.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake:
+
+/usr/share/cmake-3.28/Modules/FindThreads.cmake:
 
 /usr/include/c++/13/pstl/execution_defs.h:
 
@@ -407,10 +520,6 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 /usr/include/alloca.h:
 
 /usr/include/c++/13/algorithm:
-
-/usr/share/cmake-3.28/Modules/Compiler/GNU.cmake:
-
-/usr/include/c++/13/bits/algorithmfwd.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
@@ -511,9 +620,3 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake:
 
 /usr/include/c++/13/pstl/pstl_config.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake:
-
-/usr/share/cmake-3.28/Modules/FindThreads.cmake:
-
-/usr/include/features.h:

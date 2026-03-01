@@ -138,6 +138,11 @@
 	"SOURCES" : 
 	[
 		[
+			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/tests/test_ProcessModel.cpp",
+			"Mu",
+			null
+		],
+		[
 			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/tests/test_pid.cpp",
 			"Mu",
 			null

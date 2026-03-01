@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "pidsim_autogen/timestamp" "custom" "pidsim_autogen/deps"
   "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/mocs_compilation.cpp" "CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o.d"
   "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.cpp" "CMakeFiles/pidsim.dir/src/PIDUI.cpp.o" "gcc" "CMakeFiles/pidsim.dir/src/PIDUI.cpp.o.d"
+  "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.cpp" "CMakeFiles/pidsim.dir/src/ProcessModel.cpp.o" "gcc" "CMakeFiles/pidsim.dir/src/ProcessModel.cpp.o.d"
   "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/main.cpp" "CMakeFiles/pidsim.dir/src/main.cpp.o" "gcc" "CMakeFiles/pidsim.dir/src/main.cpp.o.d"
   "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.cpp" "CMakeFiles/pidsim.dir/src/pid.cpp.o" "gcc" "CMakeFiles/pidsim.dir/src/pid.cpp.o.d"
   )

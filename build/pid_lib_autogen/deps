@@ -2,6 +2,8 @@ pid_lib_autogen/timestamp: \
 	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/CMakeLists.txt \
 	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
 	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
+	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.cpp \
+	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.h \
 	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.cpp \
 	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.h \
 	/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake \

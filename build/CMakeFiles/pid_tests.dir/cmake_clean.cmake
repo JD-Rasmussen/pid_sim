@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "pid_tests_autogen"
   "CMakeFiles/pid_tests.dir/pid_tests_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/pid_tests.dir/pid_tests_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.o"
+  "CMakeFiles/pid_tests.dir/tests/test_ProcessModel.cpp.o.d"
   "CMakeFiles/pid_tests.dir/tests/test_pid.cpp.o"
   "CMakeFiles/pid_tests.dir/tests/test_pid.cpp.o.d"
   "pid_tests"
