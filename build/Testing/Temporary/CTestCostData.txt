@@ -1,4 +1,23 @@
-PID.ProportionalOnlyAndClamp 3 0.00121727
-PID.IntegralAfterTnApproxEqualsP 2 0.00126241
-PID.DtInvarianceSameTotalTimeSameOutput 3 0.000636802
+PID.ProportionalOnlyAndClamp 10 0.000245631
+PID.IntegralAfterTnApproxEqualsP 9 0.000221816
+PID.DtInvarianceSameTotalTimeSameOutput 10 0.000196743
+ProcessModel.WaterTank 6 0.000329936
+ProcessModel.WaterTankBounds 7 0.000297259
+ProcessModel.WaterTankReset 6 0.000333961
+ProcessModel.WaterTankOutflowRamp 7 0.00028683
+ProcessModel.WaterTankInflowScaling 6 0.00031979
+ProcessModel.WaterTankOutflowRampDirection 7 0.000280316
+ProcessModel.WaterTankInflowClamping 7 0.000327732
+ProcessModel.WaterTankOutflowClamping 7 0.000271057
+ProcessModel.WaterTankVolumeCalculation 2 0.0010957
+ProcessModel.WaterTankInitialState 7 0.000304554
+ProcessModel.WaterTankSteadyState 5 0.000454197
+ProcessModel.WaterTankResponseToStepInput 6 0.000339921
+ProcessModel.WaterTankResponseToNegativeInput 7 0.000269673
+ProcessModel.WaterTankResponseToZeroInput 7 0.00027223
+ProcessModel.WaterTankResponseToMaxInput 7 0.000277347
+ProcessModel.WaterTankResponseToMinInput 7 0.000275765
+ProcessModel.WaterTankResponseToSustainedInput 5 0.00037959
+ProcessModel.WaterTankResponseToSustainedZeroInput 7 0.000294499
+ProcessModel.WaterTankResponseToSustainedMaxInput 7 0.000287366
 ---

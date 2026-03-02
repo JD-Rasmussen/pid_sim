@@ -1,10 +1,10 @@
-Start testing: Feb 27 22:20 CET
+Start testing: Mar 02 22:55 CET
 ----------------------------------------------------------
-1/3 Testing: PID.ProportionalOnlyAndClamp
-1/3 Test: PID.ProportionalOnlyAndClamp
+1/22 Testing: PID.ProportionalOnlyAndClamp
+1/22 Test: PID.ProportionalOnlyAndClamp
 Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=PID.ProportionalOnlyAndClamp" "--gtest_also_run_disabled_tests"
 Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
-"PID.ProportionalOnlyAndClamp" start time: Feb 27 22:20 CET
+"PID.ProportionalOnlyAndClamp" start time: Mar 02 22:55 CET
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -23,15 +23,15 @@ Note: Google Test filter = PID.ProportionalOnlyAndClamp
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"PID.ProportionalOnlyAndClamp" end time: Feb 27 22:20 CET
+"PID.ProportionalOnlyAndClamp" end time: Mar 02 22:55 CET
 "PID.ProportionalOnlyAndClamp" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/3 Testing: PID.IntegralAfterTnApproxEqualsP
-2/3 Test: PID.IntegralAfterTnApproxEqualsP
+2/22 Testing: PID.IntegralAfterTnApproxEqualsP
+2/22 Test: PID.IntegralAfterTnApproxEqualsP
 Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=PID.IntegralAfterTnApproxEqualsP" "--gtest_also_run_disabled_tests"
 Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
-"PID.IntegralAfterTnApproxEqualsP" start time: Feb 27 22:20 CET
+"PID.IntegralAfterTnApproxEqualsP" start time: Mar 02 22:55 CET
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -50,15 +50,15 @@ Note: Google Test filter = PID.IntegralAfterTnApproxEqualsP
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"PID.IntegralAfterTnApproxEqualsP" end time: Feb 27 22:20 CET
+"PID.IntegralAfterTnApproxEqualsP" end time: Mar 02 22:55 CET
 "PID.IntegralAfterTnApproxEqualsP" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/3 Testing: PID.DtInvarianceSameTotalTimeSameOutput
-3/3 Test: PID.DtInvarianceSameTotalTimeSameOutput
+3/22 Testing: PID.DtInvarianceSameTotalTimeSameOutput
+3/22 Test: PID.DtInvarianceSameTotalTimeSameOutput
 Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=PID.DtInvarianceSameTotalTimeSameOutput" "--gtest_also_run_disabled_tests"
 Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
-"PID.DtInvarianceSameTotalTimeSameOutput" start time: Feb 27 22:20 CET
+"PID.DtInvarianceSameTotalTimeSameOutput" start time: Mar 02 22:55 CET
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -77,8 +77,521 @@ Note: Google Test filter = PID.DtInvarianceSameTotalTimeSameOutput
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"PID.DtInvarianceSameTotalTimeSameOutput" end time: Feb 27 22:20 CET
+"PID.DtInvarianceSameTotalTimeSameOutput" end time: Mar 02 22:55 CET
 "PID.DtInvarianceSameTotalTimeSameOutput" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Feb 27 22:20 CET
+4/22 Testing: ProcessModel.WaterTank
+4/22 Test: ProcessModel.WaterTank
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTank" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTank" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTank
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTank
+[       OK ] ProcessModel.WaterTank (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTank" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTank" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/22 Testing: ProcessModel.WaterTankBounds
+5/22 Test: ProcessModel.WaterTankBounds
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankBounds" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankBounds" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankBounds
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankBounds
+[       OK ] ProcessModel.WaterTankBounds (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankBounds" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankBounds" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/22 Testing: ProcessModel.WaterTankReset
+6/22 Test: ProcessModel.WaterTankReset
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankReset" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankReset" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankReset
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankReset
+[       OK ] ProcessModel.WaterTankReset (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankReset" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankReset" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/22 Testing: ProcessModel.WaterTankOutflowRamp
+7/22 Test: ProcessModel.WaterTankOutflowRamp
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankOutflowRamp" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankOutflowRamp" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankOutflowRamp
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankOutflowRamp
+[       OK ] ProcessModel.WaterTankOutflowRamp (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankOutflowRamp" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankOutflowRamp" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/22 Testing: ProcessModel.WaterTankInflowScaling
+8/22 Test: ProcessModel.WaterTankInflowScaling
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankInflowScaling" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankInflowScaling" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankInflowScaling
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankInflowScaling
+[       OK ] ProcessModel.WaterTankInflowScaling (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankInflowScaling" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankInflowScaling" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/22 Testing: ProcessModel.WaterTankOutflowRampDirection
+9/22 Test: ProcessModel.WaterTankOutflowRampDirection
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankOutflowRampDirection" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankOutflowRampDirection" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankOutflowRampDirection
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankOutflowRampDirection
+[       OK ] ProcessModel.WaterTankOutflowRampDirection (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankOutflowRampDirection" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankOutflowRampDirection" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/22 Testing: ProcessModel.WaterTankInflowClamping
+10/22 Test: ProcessModel.WaterTankInflowClamping
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankInflowClamping" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankInflowClamping" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankInflowClamping
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankInflowClamping
+[       OK ] ProcessModel.WaterTankInflowClamping (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankInflowClamping" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankInflowClamping" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/22 Testing: ProcessModel.WaterTankOutflowClamping
+11/22 Test: ProcessModel.WaterTankOutflowClamping
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankOutflowClamping" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankOutflowClamping" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankOutflowClamping
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankOutflowClamping
+[       OK ] ProcessModel.WaterTankOutflowClamping (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankOutflowClamping" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankOutflowClamping" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/22 Testing: ProcessModel.WaterTankVolumeCalculation
+12/22 Test: ProcessModel.WaterTankVolumeCalculation
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankVolumeCalculation" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankVolumeCalculation" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankVolumeCalculation
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankVolumeCalculation
+[       OK ] ProcessModel.WaterTankVolumeCalculation (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankVolumeCalculation" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankVolumeCalculation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/22 Testing: ProcessModel.WaterTankInitialState
+13/22 Test: ProcessModel.WaterTankInitialState
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankInitialState" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankInitialState" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankInitialState
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankInitialState
+[       OK ] ProcessModel.WaterTankInitialState (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankInitialState" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankInitialState" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/22 Testing: ProcessModel.WaterTankSteadyState
+14/22 Test: ProcessModel.WaterTankSteadyState
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankSteadyState" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankSteadyState" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankSteadyState
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankSteadyState
+[       OK ] ProcessModel.WaterTankSteadyState (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankSteadyState" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankSteadyState" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/22 Testing: ProcessModel.WaterTankResponseToStepInput
+15/22 Test: ProcessModel.WaterTankResponseToStepInput
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankResponseToStepInput" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankResponseToStepInput" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankResponseToStepInput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankResponseToStepInput
+[       OK ] ProcessModel.WaterTankResponseToStepInput (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankResponseToStepInput" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankResponseToStepInput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/22 Testing: ProcessModel.WaterTankResponseToNegativeInput
+16/22 Test: ProcessModel.WaterTankResponseToNegativeInput
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankResponseToNegativeInput" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankResponseToNegativeInput" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankResponseToNegativeInput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankResponseToNegativeInput
+[       OK ] ProcessModel.WaterTankResponseToNegativeInput (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankResponseToNegativeInput" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankResponseToNegativeInput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/22 Testing: ProcessModel.WaterTankResponseToZeroInput
+17/22 Test: ProcessModel.WaterTankResponseToZeroInput
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankResponseToZeroInput" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankResponseToZeroInput" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankResponseToZeroInput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankResponseToZeroInput
+[       OK ] ProcessModel.WaterTankResponseToZeroInput (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankResponseToZeroInput" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankResponseToZeroInput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/22 Testing: ProcessModel.WaterTankResponseToMaxInput
+18/22 Test: ProcessModel.WaterTankResponseToMaxInput
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankResponseToMaxInput" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankResponseToMaxInput" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankResponseToMaxInput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankResponseToMaxInput
+[       OK ] ProcessModel.WaterTankResponseToMaxInput (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankResponseToMaxInput" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankResponseToMaxInput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/22 Testing: ProcessModel.WaterTankResponseToMinInput
+19/22 Test: ProcessModel.WaterTankResponseToMinInput
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankResponseToMinInput" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankResponseToMinInput" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankResponseToMinInput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankResponseToMinInput
+[       OK ] ProcessModel.WaterTankResponseToMinInput (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankResponseToMinInput" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankResponseToMinInput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/22 Testing: ProcessModel.WaterTankResponseToSustainedInput
+20/22 Test: ProcessModel.WaterTankResponseToSustainedInput
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankResponseToSustainedInput" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankResponseToSustainedInput" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankResponseToSustainedInput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankResponseToSustainedInput
+[       OK ] ProcessModel.WaterTankResponseToSustainedInput (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankResponseToSustainedInput" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankResponseToSustainedInput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/22 Testing: ProcessModel.WaterTankResponseToSustainedZeroInput
+21/22 Test: ProcessModel.WaterTankResponseToSustainedZeroInput
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankResponseToSustainedZeroInput" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankResponseToSustainedZeroInput" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankResponseToSustainedZeroInput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankResponseToSustainedZeroInput
+[       OK ] ProcessModel.WaterTankResponseToSustainedZeroInput (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankResponseToSustainedZeroInput" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankResponseToSustainedZeroInput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/22 Testing: ProcessModel.WaterTankResponseToSustainedMaxInput
+22/22 Test: ProcessModel.WaterTankResponseToSustainedMaxInput
+Command: "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests" "--gtest_filter=ProcessModel.WaterTankResponseToSustainedMaxInput" "--gtest_also_run_disabled_tests"
+Directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+"ProcessModel.WaterTankResponseToSustainedMaxInput" start time: Mar 02 22:55 CET
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ProcessModel.WaterTankResponseToSustainedMaxInput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ProcessModel
+[ RUN      ] ProcessModel.WaterTankResponseToSustainedMaxInput
+[       OK ] ProcessModel.WaterTankResponseToSustainedMaxInput (0 ms)
+[----------] 1 test from ProcessModel (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProcessModel.WaterTankResponseToSustainedMaxInput" end time: Mar 02 22:55 CET
+"ProcessModel.WaterTankResponseToSustainedMaxInput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 02 22:55 CET
