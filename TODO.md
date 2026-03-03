@@ -24,19 +24,21 @@
 
 - Goal: process model
 
-- [ ] Create a ProcessModel interface / base object:
-- [ ] it should return a PV take
-- [ ] host sub models that simulate behaivoure
-- [ ] selection of sub models
-- [ ] water tank level, with variable tank size and varying water consumption
+- [x] Create a ProcessModel interface / base object:
+- [x] it should return a PV take
+- [x] host sub models that simulate behaivoure
+- [x] selection of sub models
+- [x] water tank level, with variable tank size and varying water consumption
+
+- [ ] couple first enviroment to the pid and test it
 
 
-- [ ] second sub module
+ second sub module
 - [ ] steel plate being heated
 - [ ] variable heating element size
 - [ ] variable steel plate size and heat spread
 - [ ] variable insulation level of the plate, or some other way to simulate disturbances in the process
-
+- [ ] 3 arrays one thats the hot side on thats the "cold" side and one thats the sensor area in the middle. the two sides are on a delay before they act on the sensor. meh something like that. 
 
 
 
