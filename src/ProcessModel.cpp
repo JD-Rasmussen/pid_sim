@@ -25,10 +25,10 @@ void WaterTank::reset() {
 
 }
 
-float WaterTank::update(float *u, float *dt) {
+float WaterTank::update(float u, float dt) {
     //outflow is ramped up or down to simulate changes in water level.
 
-    float dtminutes = (*dt) / 60.0f; // convert time step from seconds to minutes for flow rates in liters per minute
+    float dtminutes = dt / 60.0f; // convert time step from seconds to minutes for flow rates in liters per minute
 
     if (outflow >= maxOutflow_) {
         rampUp_ = false;
@@ -44,10 +44,10 @@ float WaterTank::update(float *u, float *dt) {
     };
 
 // Inflow is scaled based on the control input u.
-    if (*u > 0.0f) {
-        inflow = maxInflow_/(*u)*100.0f; // scale inflow to percentage of max inflow
+    if (u > 0.0f) {
+        inflow = maxInflow_/u*100.0f; // scale inflow to percentage of max inflow
     }
-    inflow = std::clamp(*u, 0.0f, maxInflow_); // ensure inflow is within bounds
+    inflow = std::clamp(u, 0.0f, maxInflow_); // ensure inflow is within bounds
 
     float dVolume = (inflow - outflow) * dtminutes; // change in volume liters = (inflow - outflow) * time step in seconds
     WaterLevel_ = std::clamp(WaterLevel_ + dVolume, 0.0f, volume_); // keep within 

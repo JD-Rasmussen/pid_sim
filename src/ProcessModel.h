@@ -21,6 +21,7 @@ class ProcessModel{
 class WaterTank : public ProcessModel {
 
     public:
+        ProcessModel() = default;
 
         void setParams(float radius, float height, float maxInflow, float maxOutflow);
         void reset() override;

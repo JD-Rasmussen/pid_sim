@@ -7,26 +7,28 @@
 #include <array>
 #include <QDoubleSpinBox>
 #include <QSpinBox>
-
+#include "ProcessModel.h"
 #include "pid.h"
 #include "PIDUI.h"
+//#include <chrono>
 
 //consider changing to a more robust event loop with std::chrono and std::thread for the physics update.
 //std::shared_ptrstd::unique_ptr
 //std::chrono::duration
 //std::chrono::steady_clockstd::chono::system_clockstd::chrono::high_precision
 
+ //   using std::chrono::steady_clock;
+ //   using namespace std::chrono_literals;
 
-
-
+float u = 0.0f; // control input (inflow rate)
 
 int main(int argc, char *argv[]) {
-
+ 
     const size_t NUM_PIDS = 4; // number of PID controllers
     std::array<PID, NUM_PIDS> pids;
     Params params[NUM_PIDS]; // array to hold parameters for each PID controller
     int activePIDIndex = 0; // index of the currently selected pid controller
-
+    std::array<WaterTank, NUM_PIDS> watertanks; // array of water tanks for each PID controller
 
     // init
     for (size_t i = 0; i < NUM_PIDS; ++i) {
@@ -37,6 +39,8 @@ int main(int argc, char *argv[]) {
         params[i].Td = 0.0;    // Set different derivative times
         pids[i].setParams(params[i]);
         pids[i].reset(); // Reset each PID controller to clear any previous state
+        watertanks[i].setParams(100.0f, 1000.0f, 100.0f, 80.0f); // Set parameters for each water tank
+        watertanks[i].reset(); // Reset each water tank to initial state
     }
 
     QApplication app(argc, argv);
@@ -89,8 +93,8 @@ int main(int argc, char *argv[]) {
         const int maxSubsteps = NUM_PIDS+1;   // safety guard
         while (accumulator >= fixed_dt && substeps < maxSubsteps) { 
             for (auto& pid : pids) {   
-                float pv = 50.0; // placeholder for actual PV when enviroment is added
-                float u  = pid.update(pv, fixed_dt);
+                float pv = watertanks[activePIDIndex].update(u , fixed_dt); // placeholder for actual PV when enviroment is added
+                u = pid.update(pv, fixed_dt);
             // add output later
             }
 

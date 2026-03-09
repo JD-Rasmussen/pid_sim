@@ -31,7 +31,7 @@
 - [x] water tank level, with variable tank size and varying water consumption
 
 - [ ] couple first enviroment to the pid and test it
-
+- [ ] add graphing
 
  second sub module
 - [ ] steel plate being heated
