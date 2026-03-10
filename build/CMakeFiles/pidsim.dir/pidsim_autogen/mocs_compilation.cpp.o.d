@@ -1,7 +1,7 @@
 CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o: \
  /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/UVLADIE3JM/moc_PIDUI.cpp \
+ /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/UVLADIE3JM/moc_GraphWidget.cpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -196,7 +196,7 @@ CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/bits/ranges_algobase.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/UVLADIE3JM/../../../src/PIDUI.h \
+ /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/UVLADIE3JM/../../../src/GraphWidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -324,6 +324,9 @@ CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
+ /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/UVLADIE3JM/../../../src/SimulationLogger.h \
+ /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/UVLADIE3JM/moc_PIDUI.cpp \
+ /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/UVLADIE3JM/../../../src/PIDUI.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDoubleSpinBox \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \

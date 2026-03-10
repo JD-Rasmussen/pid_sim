@@ -3,10 +3,13 @@ pidsim_autogen/timestamp: \
 	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
 	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
 	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/moc_predefs.h \
+	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/GraphWidget.cpp \
+	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/GraphWidget.h \
 	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.cpp \
 	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.h \
 	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.cpp \
 	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.h \
+	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/SimulationLogger.h \
 	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/main.cpp \
 	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.cpp \
 	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.h \

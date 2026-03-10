@@ -315,6 +315,30 @@ pidsim_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.s
 .PHONY : pidsim_autogen/mocs_compilation.cpp.s
 
+src/GraphWidget.o: src/GraphWidget.cpp.o
+.PHONY : src/GraphWidget.o
+
+# target to build an object file
+src/GraphWidget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/GraphWidget.cpp.o
+.PHONY : src/GraphWidget.cpp.o
+
+src/GraphWidget.i: src/GraphWidget.cpp.i
+.PHONY : src/GraphWidget.i
+
+# target to preprocess a source file
+src/GraphWidget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/GraphWidget.cpp.i
+.PHONY : src/GraphWidget.cpp.i
+
+src/GraphWidget.s: src/GraphWidget.cpp.s
+.PHONY : src/GraphWidget.s
+
+# target to generate assembly for a file
+src/GraphWidget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pidsim.dir/build.make CMakeFiles/pidsim.dir/src/GraphWidget.cpp.s
+.PHONY : src/GraphWidget.cpp.s
+
 src/PIDUI.o: src/PIDUI.cpp.o
 .PHONY : src/PIDUI.o
 
@@ -492,6 +516,9 @@ help:
 	@echo "... pidsim_autogen/mocs_compilation.o"
 	@echo "... pidsim_autogen/mocs_compilation.i"
 	@echo "... pidsim_autogen/mocs_compilation.s"
+	@echo "... src/GraphWidget.o"
+	@echo "... src/GraphWidget.i"
+	@echo "... src/GraphWidget.s"
 	@echo "... src/PIDUI.o"
 	@echo "... src/PIDUI.i"
 	@echo "... src/PIDUI.s"

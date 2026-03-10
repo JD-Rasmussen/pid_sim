@@ -2,14 +2,19 @@
 #include <QWidget>
 #include <QLabel>
 #include <QVBoxLayout>
+#include <QHBoxLayout>
 #include <QTimer>
 #include <QElapsedTimer>
 #include <array>
 #include <QDoubleSpinBox>
 #include <QSpinBox>
+#include <QTabWidget>
+#include <QPushButton>
 #include "ProcessModel.h"
 #include "pid.h"
 #include "PIDUI.h"
+#include "SimulationLogger.h"
+#include "GraphWidget.h"
 //#include <chrono>
 
 //consider changing to a more robust event loop with std::chrono and std::thread for the physics update.
@@ -20,8 +25,6 @@
  //   using std::chrono::steady_clock;
  //   using namespace std::chrono_literals;
 
-float u = 0.0f; // control input (inflow rate)
-
 int main(int argc, char *argv[]) {
  
     const size_t NUM_PIDS = 4; // number of PID controllers
@@ -29,7 +32,9 @@ int main(int argc, char *argv[]) {
     Params params[NUM_PIDS]; // array to hold parameters for each PID controller
     int activePIDIndex = 0; // index of the currently selected pid controller
     std::array<WaterTank, NUM_PIDS> watertanks; // array of water tanks for each PID controller
-
+    std::array<SimulationLogger, NUM_PIDS> loggers; // data loggers for each PID/tank pair
+    std::array<float, NUM_PIDS> u_values{}; // control signals for each PID (initialized to 0)
+    
     // init
     for (size_t i = 0; i < NUM_PIDS; ++i) {
         pids[i] = PID(); // Initialize each PID controller
@@ -48,19 +53,42 @@ int main(int argc, char *argv[]) {
     // Main window
     QWidget window;
     window.setWindowTitle("PID Sim");
-    window.resize(800, 600);
+    window.resize(1400, 800);
 
-    //pid panel 
-    auto *layout = new QVBoxLayout(&window);
+    // Main layout with control panel and tabs
+    auto *mainLayout = new QHBoxLayout(&window);
+    
+    // Control panel (left side)
+    auto *controlPanel = new QWidget(&window);
+    auto *controlLayout = new QVBoxLayout(controlPanel);
+    
     auto* paramsPanel = new PidParamsPanel(&window);
-    layout->addWidget(paramsPanel);
+    controlLayout->addWidget(paramsPanel);
+    
     auto* indexSpin = new QSpinBox(&window);
     indexSpin->setRange(0, NUM_PIDS - 1);
-    layout->addWidget(indexSpin);
+    controlLayout->addWidget(indexSpin);
     paramsPanel->setParams(pids[activePIDIndex].params());
 
     auto *label  = new QLabel("Tick: 0");
-    layout->addWidget(label);
+    controlLayout->addWidget(label);
+    
+    auto *resetButton = new QPushButton("Reset Data", &window);
+    controlLayout->addWidget(resetButton);
+    
+    controlLayout->addStretch();
+    mainLayout->addWidget(controlPanel, 0, Qt::AlignTop);
+    
+    // Tab widget for graphs (right side)
+    auto *tabWidget = new QTabWidget(&window);
+    std::array<GraphWidget*, NUM_PIDS> graphWidgets;
+    for (size_t i = 0; i < NUM_PIDS; ++i) {
+        graphWidgets[i] = new GraphWidget(&window);
+        tabWidget->addTab(graphWidgets[i], QString("PID #%1").arg(i));
+    }
+    mainLayout->addWidget(tabWidget, 1);
+    
+    window.setLayout(mainLayout);
 
     QObject::connect(indexSpin, QOverload<int>::of(&QSpinBox::valueChanged), [&](int index) {
         activePIDIndex = index;
@@ -70,6 +98,13 @@ int main(int argc, char *argv[]) {
 
     QObject::connect(paramsPanel, &PidParamsPanel::paramsEdited, [&](const Params& p) {
         pids[activePIDIndex].setParams(p);
+    });
+    
+    QObject::connect(resetButton, &QPushButton::clicked, [&]() {
+        for (size_t i = 0; i < NUM_PIDS; ++i) {
+            loggers[i].reset();
+            graphWidgets[i]->updateGraph(loggers[i].data());
+        }
     });
 
 
@@ -84,6 +119,7 @@ int main(int argc, char *argv[]) {
     timer.setTimerType(Qt::PreciseTimer);
     timer.start(10);                 // UI heartbeat request (not a guarantee)
     int tickCount = 0;
+    float totalTime = 0.0f;
 
     QObject::connect(&timer, &QTimer::timeout, [&] {
         const double dt_real = clock.restart() / 1000.0;  // seconds
@@ -92,17 +128,30 @@ int main(int argc, char *argv[]) {
         int substeps = 0;
         const int maxSubsteps = NUM_PIDS+1;   // safety guard
         while (accumulator >= fixed_dt && substeps < maxSubsteps) { 
-            for (auto& pid : pids) {   
-                float pv = watertanks[activePIDIndex].update(u , fixed_dt); // placeholder for actual PV when enviroment is added
-                u = pid.update(pv, fixed_dt);
-            // add output later
+            // Update each PID and its corresponding water tank
+            for (size_t i = 0; i < NUM_PIDS; ++i) {
+                // Apply current control signal to water tank
+                float pv = watertanks[i].update(u_values[i], fixed_dt);
+                
+                // Compute new control signal based on current process variable
+                u_values[i] = pids[i].update(pv, fixed_dt);
+                
+                // Log data for this PID/tank pair
+                loggers[i].addDataPoint(totalTime, pv, u_values[i]);
             }
 
+            totalTime += fixed_dt;
             ++tickCount;
             accumulator -= fixed_dt;
             ++substeps;
         }
-        label->setText(QString("Tick: %1").arg(dt_real));
+        
+        // Update all graphs
+        for (size_t i = 0; i < NUM_PIDS; ++i) {
+            graphWidgets[i]->updateGraph(loggers[i].data());
+        }
+        
+        label->setText(QString("Tick: %1 | Time: %2s").arg(tickCount).arg(totalTime, 0, 'f', 2));
     });
     window.show();
     return app.exec();

@@ -40,6 +40,9 @@ add_executable(pidsim
     src/PIDUI.cpp
     src/ProcessModel.h
     src/ProcessModel.cpp
+    src/SimulationLogger.h
+    src/GraphWidget.h
+    src/GraphWidget.cpp
     )
 
 target_link_libraries(pidsim PRIVATE pid_lib Qt5::Widgets)

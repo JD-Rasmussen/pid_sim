@@ -7,7 +7,7 @@
 static float run_for_time(WaterTank& wtank, float u, float dt, int steps) {
     float PV = 0.0f;
     for (int i = 0; i < steps; ++i) {
-        PV = wtank.update(&u, &dt);
+        PV = wtank.update(u, dt);
     }
     return PV;
 }
@@ -67,7 +67,7 @@ TEST(ProcessModel, WaterTankReset) {
     // Now reset and check that the water level goes back to zero
     float zero = 0.0f;
     wtank.reset();
-    PV = wtank.update(&zero, &zero); // update with zero control input and zero time step to get current PV
+    PV = wtank.update(zero, zero); // update with zero control input and zero time step to get current PV
     EXPECT_EQ(PV, 0.0f); // Expect water level to be reset to zero
 }
 
@@ -164,7 +164,7 @@ TEST(ProcessModel, WaterTankVolumeCalculation) {
     float PV = 0.0f;
     for (int i = 0; i < steps; ++i) {
         float uu = u, dd = dt;
-        PV = wtank.update(&uu, &dd);
+        PV = wtank.update(uu, dd);
         if (PV >= 1000.0f - 1e-3f) break; // stop if we reach the tank height
     }
     EXPECT_NEAR(PV, 1000.0f, 1e-3f); // Expect water level to be close to tank height at steady state with max inflow
@@ -178,7 +178,7 @@ TEST(ProcessModel, WaterTankInitialState) {
     float u = 0.0f; // no inflow
     float dt = 0.1f; // time step in seconds
 
-    float PV = wtank.update(&u, &dt);
+    float PV = wtank.update(u, dt);
     EXPECT_EQ(PV, 0.0f); // Expect initial water level to be zero
 }
 

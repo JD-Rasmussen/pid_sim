@@ -346,6 +346,7 @@ CMakeFiles/pidsim.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
@@ -357,5 +358,14 @@ CMakeFiles/pidsim.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTabWidget \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
+ /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.h \
  /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.h \
- /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.h
+ /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.h \
+ /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/SimulationLogger.h \
+ /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/GraphWidget.h

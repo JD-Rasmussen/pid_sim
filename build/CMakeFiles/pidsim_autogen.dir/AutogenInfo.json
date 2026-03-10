@@ -89,6 +89,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/GraphWidget.h",
+			"Mu",
+			"UVLADIE3JM/moc_GraphWidget.cpp",
+			null
+		],
+		[
 			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.h",
 			"Mu",
 			"UVLADIE3JM/moc_PIDUI.cpp",
@@ -98,6 +104,12 @@
 			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.h",
 			"Mu",
 			"UVLADIE3JM/moc_ProcessModel.cpp",
+			null
+		],
+		[
+			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/SimulationLogger.h",
+			"Mu",
+			"UVLADIE3JM/moc_SimulationLogger.cpp",
 			null
 		],
 		[
@@ -163,6 +175,11 @@
 	"SETTINGS_FILE" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/GraphWidget.cpp",
+			"Mu",
+			null
+		],
 		[
 			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.cpp",
 			"Mu",

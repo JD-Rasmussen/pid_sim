@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "pidsim_autogen"
   "CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/pidsim.dir/pidsim_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/pidsim.dir/src/GraphWidget.cpp.o"
+  "CMakeFiles/pidsim.dir/src/GraphWidget.cpp.o.d"
   "CMakeFiles/pidsim.dir/src/PIDUI.cpp.o"
   "CMakeFiles/pidsim.dir/src/PIDUI.cpp.o.d"
   "CMakeFiles/pidsim.dir/src/ProcessModel.cpp.o"
