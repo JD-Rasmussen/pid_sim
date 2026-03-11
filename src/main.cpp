@@ -70,11 +70,36 @@ int main(int argc, char *argv[]) {
     controlLayout->addWidget(indexSpin);
     paramsPanel->setParams(pids[activePIDIndex].params());
 
+    // Time window controls
+    auto *timeWindowLabel = new QLabel("Time Window");
+    timeWindowLabel->setStyleSheet("font-weight: bold;");
+    controlLayout->addWidget(timeWindowLabel);
+    
+    auto *startTimeLabel = new QLabel("Start Time (s):");
+    auto *startTimeSpin = new QDoubleSpinBox(&window);
+    startTimeSpin->setRange(0.0, 1000.0);
+    startTimeSpin->setSingleStep(1.0);
+    startTimeSpin->setValue(0.0);
+    controlLayout->addWidget(startTimeLabel);
+    controlLayout->addWidget(startTimeSpin);
+    
+    auto *durationLabel = new QLabel("Duration (s):");
+    auto *durationSpin = new QDoubleSpinBox(&window);
+    durationSpin->setRange(0.1, 1000.0);
+    durationSpin->setSingleStep(1.0);
+    durationSpin->setValue(10.0);
+    controlLayout->addWidget(durationLabel);
+    controlLayout->addWidget(durationSpin);
+
     auto *label  = new QLabel("Tick: 0");
     controlLayout->addWidget(label);
     
     auto *resetButton = new QPushButton("Reset Data", &window);
     controlLayout->addWidget(resetButton);
+    
+    auto *currentULabel = new QLabel("Current U: 0.00");
+    currentULabel->setStyleSheet("font-weight: bold; color: darkred;");
+    controlLayout->addWidget(currentULabel);
     
     controlLayout->addStretch();
     mainLayout->addWidget(controlPanel, 0, Qt::AlignTop);
@@ -106,6 +131,16 @@ int main(int argc, char *argv[]) {
             graphWidgets[i]->updateGraph(loggers[i].data());
         }
     });
+
+    // Connect time window controls to update all graphs
+    auto updateTimeWindow = [&]() {
+        for (size_t i = 0; i < NUM_PIDS; ++i) {
+            graphWidgets[i]->setTimeWindow(startTimeSpin->value(), durationSpin->value());
+        }
+    };
+
+    QObject::connect(startTimeSpin, QOverload<double>::of(&QDoubleSpinBox::valueChanged), updateTimeWindow);
+    QObject::connect(durationSpin, QOverload<double>::of(&QDoubleSpinBox::valueChanged), updateTimeWindow);
 
 
 
@@ -152,6 +187,7 @@ int main(int argc, char *argv[]) {
         }
         
         label->setText(QString("Tick: %1 | Time: %2s").arg(tickCount).arg(totalTime, 0, 'f', 2));
+        currentULabel->setText(QString("Current U: %1").arg(u_values[activePIDIndex], 0, 'f', 2));
     });
     window.show();
     return app.exec();

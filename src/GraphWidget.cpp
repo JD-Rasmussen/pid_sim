@@ -3,15 +3,23 @@
 #include <QResizeEvent>
 #include <cmath>
 #include <algorithm>
+#include <limits>
 
 GraphWidget::GraphWidget(QWidget *parent) : QWidget(parent) {
     setMinimumSize(400, 300);
     setStyleSheet("background-color: white;");
 }
 
+void GraphWidget::setTimeWindow(float startTime, float duration) {
+    viewStartTime_ = startTime;
+    viewDuration_ = duration;
+    boundsNeedUpdate_ = true;  // Mark bounds as needing recalculation
+    update();  // Trigger repaint
+}
+
 void GraphWidget::updateGraph(const SimulationData& data) {
     data_ = data;
-    calculateBounds();
+    boundsNeedUpdate_ = true;  // Mark bounds as needing recalculation
     update();  // Trigger repaint
 }
 
@@ -24,20 +32,43 @@ void GraphWidget::calculateBounds() {
         return;
     }
 
-    // Calculate time bounds
-    minTime_ = *std::min_element(data_.timeSteps.begin(), data_.timeSteps.end());
-    maxTime_ = *std::max_element(data_.timeSteps.begin(), data_.timeSteps.end());
-    
-    if (minTime_ == maxTime_) {
-        minTime_ -= 0.1f;
-        maxTime_ += 0.1f;
+    // Use the view window for time bounds if enabled
+    if (useViewWindow_) {
+        minTime_ = viewStartTime_;
+        maxTime_ = viewStartTime_ + viewDuration_;
+    } else {
+        // Auto-scale to all available data
+        minTime_ = *std::min_element(data_.timeSteps.begin(), data_.timeSteps.end());
+        maxTime_ = *std::max_element(data_.timeSteps.begin(), data_.timeSteps.end());
+        
+        if (minTime_ == maxTime_) {
+            minTime_ -= 0.1f;
+            maxTime_ += 0.1f;
+        }
     }
 
-    // Calculate value bounds for both PV and U
-    float minPV = *std::min_element(data_.pvValues.begin(), data_.pvValues.end());
-    float maxPV = *std::max_element(data_.pvValues.begin(), data_.pvValues.end());
-    float minU = *std::min_element(data_.uValues.begin(), data_.uValues.end());
-    float maxU = *std::max_element(data_.uValues.begin(), data_.uValues.end());
+    // Calculate value bounds for both PV and U within the view window
+    float minPV = std::numeric_limits<float>::max();
+    float maxPV = std::numeric_limits<float>::lowest();
+    float minU = std::numeric_limits<float>::max();
+    float maxU = std::numeric_limits<float>::lowest();
+    
+    // Only consider data points within the view window
+    for (size_t i = 0; i < data_.timeSteps.size(); ++i) {
+        if (data_.timeSteps[i] >= minTime_ && data_.timeSteps[i] <= maxTime_) {
+            minPV = std::min(minPV, data_.pvValues[i]);
+            maxPV = std::max(maxPV, data_.pvValues[i]);
+            minU = std::min(minU, data_.uValues[i]);
+            maxU = std::max(maxU, data_.uValues[i]);
+        }
+    }
+    
+    // Handle case where no data points are in the window
+    if (minPV == std::numeric_limits<float>::max()) {
+        minValue_ = 0.0f;
+        maxValue_ = 100.0f;
+        return;
+    }
 
     minValue_ = std::min(minPV, minU);
     maxValue_ = std::max(maxPV, maxU);
@@ -51,6 +82,12 @@ void GraphWidget::calculateBounds() {
 }
 
 void GraphWidget::paintEvent(QPaintEvent *event) {
+    // Recalculate bounds only if needed (data changed or time window changed)
+    if (boundsNeedUpdate_) {
+        calculateBounds();
+        boundsNeedUpdate_ = false;
+    }
+    
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing);
 
@@ -107,35 +144,56 @@ void GraphWidget::paintEvent(QPaintEvent *event) {
 
     // Draw axis titles
     painter.setFont(QFont("Arial", 10, QFont::Bold));
-    painter.drawText(width / 2 - 30, height - 10, 60, 20, Qt::AlignCenter, "Time (s)");
+    painter.drawText(width / 2 - 30, height - 25, 60, 20, Qt::AlignCenter, "Time (s)");
     painter.save();
     painter.translate(15, height / 2);
     painter.rotate(-90);
     painter.drawText(-30, 0, 60, 20, Qt::AlignCenter, "Value");
     painter.restore();
 
-    // Draw data lines
+    // Draw data lines (only within view window)
     if (!data_.timeSteps.empty() && data_.timeSteps.size() > 1) {
+        float timeRange = maxTime_ - minTime_;
+        if (timeRange <= 0) timeRange = 1.0f;
+        float valueRange = maxValue_ - minValue_;
+        if (valueRange == 0.0f) valueRange = 1.0f;
+        
         // Draw PV line (blue)
         painter.setPen(QPen(Qt::blue, 2));
-        for (size_t i = 1; i < data_.timeSteps.size(); ++i) {
-            float x1 = margin + ((data_.timeSteps[i-1] - minTime_) / (maxTime_ - minTime_)) * plotWidth;
-            float y1 = height - margin - ((data_.pvValues[i-1] - minValue_) / (maxValue_ - minValue_)) * plotHeight;
-            float x2 = margin + ((data_.timeSteps[i] - minTime_) / (maxTime_ - minTime_)) * plotWidth;
-            float y2 = height - margin - ((data_.pvValues[i] - minValue_) / (maxValue_ - minValue_)) * plotHeight;
-            
-            painter.drawLine(QPointF(x1, y1), QPointF(x2, y2));
+        bool lastPointValid = false;
+        for (size_t i = 0; i < data_.timeSteps.size(); ++i) {
+            if (data_.timeSteps[i] >= minTime_ && data_.timeSteps[i] <= maxTime_) {
+                float x = margin + ((data_.timeSteps[i] - minTime_) / timeRange) * plotWidth;
+                float y = height - margin - ((data_.pvValues[i] - minValue_) / valueRange) * plotHeight;
+                
+                if (lastPointValid && i > 0) {
+                    float x_prev = margin + ((data_.timeSteps[i-1] - minTime_) / timeRange) * plotWidth;
+                    float y_prev = height - margin - ((data_.pvValues[i-1] - minValue_) / valueRange) * plotHeight;
+                    painter.drawLine(QPointF(x_prev, y_prev), QPointF(x, y));
+                }
+                lastPointValid = true;
+            } else {
+                lastPointValid = false;
+            }
         }
 
         // Draw U line (red)
         painter.setPen(QPen(Qt::red, 2));
-        for (size_t i = 1; i < data_.timeSteps.size(); ++i) {
-            float x1 = margin + ((data_.timeSteps[i-1] - minTime_) / (maxTime_ - minTime_)) * plotWidth;
-            float y1 = height - margin - ((data_.uValues[i-1] - minValue_) / (maxValue_ - minValue_)) * plotHeight;
-            float x2 = margin + ((data_.timeSteps[i] - minTime_) / (maxTime_ - minTime_)) * plotWidth;
-            float y2 = height - margin - ((data_.uValues[i] - minValue_) / (maxValue_ - minValue_)) * plotHeight;
-            
-            painter.drawLine(QPointF(x1, y1), QPointF(x2, y2));
+        lastPointValid = false;
+        for (size_t i = 0; i < data_.timeSteps.size(); ++i) {
+            if (data_.timeSteps[i] >= minTime_ && data_.timeSteps[i] <= maxTime_) {
+                float x = margin + ((data_.timeSteps[i] - minTime_) / timeRange) * plotWidth;
+                float y = height - margin - ((data_.uValues[i] - minValue_) / valueRange) * plotHeight;
+                
+                if (lastPointValid && i > 0) {
+                    float x_prev = margin + ((data_.timeSteps[i-1] - minTime_) / timeRange) * plotWidth;
+                    float y_prev = height - margin - ((data_.uValues[i-1] - minValue_) / valueRange) * plotHeight;
+                    painter.drawLine(QPointF(x_prev, y_prev), QPointF(x, y));
+                }
+                lastPointValid = true;
+            } else {
+                lastPointValid = false;
+            }
         }
     }
 
@@ -152,6 +210,7 @@ void GraphWidget::paintEvent(QPaintEvent *event) {
 
 void GraphWidget::resizeEvent(QResizeEvent *event) {
     QWidget::resizeEvent(event);
+    // Don't recalculate bounds on resize, just repaint with cached bounds
     update();
 }
 
