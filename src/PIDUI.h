@@ -23,5 +23,7 @@ private:
     QDoubleSpinBox* kp_;
     QDoubleSpinBox* tn_;
     QDoubleSpinBox* td_;
+    QDoubleSpinBox* outMin_;
+    QDoubleSpinBox* outMax_;
     bool updatingFromModel_{false};      // guard to avoid feedback loops
 };

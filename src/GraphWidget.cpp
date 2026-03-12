@@ -10,6 +10,15 @@ GraphWidget::GraphWidget(QWidget *parent) : QWidget(parent) {
     setStyleSheet("background-color: white;");
 }
 
+// update starting time so that the newest data point sits at the right edge of the view window
+void GraphWidget::updateViewStartForAutoFollow() {
+    if (data_.timeSteps.empty())
+        return;
+    float latest = data_.timeSteps.back();
+    viewStartTime_ = latest - viewDuration_;
+    if (viewStartTime_ < 0.0f) viewStartTime_ = 0.0f;
+}
+
 void GraphWidget::setTimeWindow(float startTime, float duration) {
     viewStartTime_ = startTime;
     viewDuration_ = duration;
@@ -19,6 +28,9 @@ void GraphWidget::setTimeWindow(float startTime, float duration) {
 
 void GraphWidget::updateGraph(const SimulationData& data) {
     data_ = data;
+    if (autoFollow_) {
+        updateViewStartForAutoFollow();
+    }
     boundsNeedUpdate_ = true;  // Mark bounds as needing recalculation
     update();  // Trigger repaint
 }
@@ -30,6 +42,11 @@ void GraphWidget::calculateBounds() {
         minValue_ = 0.0f;
         maxValue_ = 100.0f;
         return;
+    }
+
+    // auto-follow should update viewStartTime_ before we compute bounds
+    if (autoFollow_ && useViewWindow_) {
+        updateViewStartForAutoFollow();
     }
 
     // Use the view window for time bounds if enabled
@@ -134,10 +151,11 @@ void GraphWidget::paintEvent(QPaintEvent *event) {
                         QString::number(time, 'f', 2));
     }
 
-    // Value labels
+    // Value labels (top=highest, bottom=lowest)
     for (int i = 0; i <= numValueGrids; ++i) {
         float value = minValue_ + ((numValueGrids - i) / (float)numValueGrids) * (maxValue_ - minValue_);
-        int y = height - margin - (i * plotHeight) / numValueGrids;
+        // compute y from top down instead of bottom up
+        int y = margin + (i * plotHeight) / numValueGrids;
         painter.drawText(5, y - 8, margin - 10, 16, Qt::AlignRight | Qt::AlignVCenter, 
                         QString::number(value, 'f', 1));
     }

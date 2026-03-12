@@ -6,8 +6,8 @@ struct Params{
     float Kp{1.0};
     float Tn{0.0}; 
     float Td{0.0};
-    float outputMin{0.0}; 
-    float outputMax{0.0};
+    float outputMin{-1e6f}; 
+    float outputMax{+1e6f};
 };
 
 class PID{

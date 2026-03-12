@@ -23,6 +23,9 @@ protected:
 
 private:
     SimulationData data_;
+
+    // auto-scroll helpers
+    void updateViewStartForAutoFollow();
     float minTime_ = 0.0f;
     float maxTime_ = 1.0f;
     float minValue_ = 0.0f;
@@ -32,9 +35,14 @@ private:
     float viewStartTime_ = 0.0f;
     float viewDuration_ = 10.0f;  // default 10 seconds
     bool useViewWindow_ = true;   // whether to use the view window or auto-scale
+    bool autoFollow_ = false;     // if true, window tracks the newest data
     
     // Bounds cache
     bool boundsNeedUpdate_ = true;
     
     void calculateBounds();
+
+public:
+    void setAutoFollow(bool enable) { autoFollow_ = enable; boundsNeedUpdate_ = true; update(); }
+    bool autoFollow() const { return autoFollow_; }
 };

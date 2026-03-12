@@ -24,9 +24,8 @@
 
  //   using std::chrono::steady_clock;
  //   using namespace std::chrono_literals;
-
-int main(int argc, char *argv[]) {
- 
+    bool firstscan = true; // flag to ensure initialization happens only once
+    
     const size_t NUM_PIDS = 4; // number of PID controllers
     std::array<PID, NUM_PIDS> pids;
     Params params[NUM_PIDS]; // array to hold parameters for each PID controller
@@ -34,20 +33,27 @@ int main(int argc, char *argv[]) {
     std::array<WaterTank, NUM_PIDS> watertanks; // array of water tanks for each PID controller
     std::array<SimulationLogger, NUM_PIDS> loggers; // data loggers for each PID/tank pair
     std::array<float, NUM_PIDS> u_values{}; // control signals for each PID (initialized to 0)
-    
+ 
+int main(int argc, char *argv[]) {
+ 
+
     // init
-    for (size_t i = 0; i < NUM_PIDS; ++i) {
+    if (firstscan){
+        for (size_t i = 0; i < NUM_PIDS; ++i) {
         pids[i] = PID(); // Initialize each PID controller
         params[i].SP = 100.0 + i * 10.0; // Set different setpoints for each PID
         params[i].Kp = 1.0;     // Set different proportional gains
         params[i].Tn = 120.0;    // Set different integral times
         params[i].Td = 0.0;    // Set different derivative times
+        params[i].outputMin = 0.0f;
+        params[i].outputMax = 100.0f; 
         pids[i].setParams(params[i]);
         pids[i].reset(); // Reset each PID controller to clear any previous state
         watertanks[i].setParams(100.0f, 1000.0f, 100.0f, 80.0f); // Set parameters for each water tank
         watertanks[i].reset(); // Reset each water tank to initial state
+        }
+        firstscan = false;
     }
-
     QApplication app(argc, argv);
 
     // Main window
@@ -90,6 +96,11 @@ int main(int argc, char *argv[]) {
     durationSpin->setValue(10.0);
     controlLayout->addWidget(durationLabel);
     controlLayout->addWidget(durationSpin);
+
+    // auto-follow checkbox
+    auto *autoFollowCheck = new QPushButton("Auto-follow", &window);
+    autoFollowCheck->setCheckable(true);
+    controlLayout->addWidget(autoFollowCheck);
 
     auto *label  = new QLabel("Tick: 0");
     controlLayout->addWidget(label);
@@ -141,6 +152,15 @@ int main(int argc, char *argv[]) {
 
     QObject::connect(startTimeSpin, QOverload<double>::of(&QDoubleSpinBox::valueChanged), updateTimeWindow);
     QObject::connect(durationSpin, QOverload<double>::of(&QDoubleSpinBox::valueChanged), updateTimeWindow);
+
+    QObject::connect(autoFollowCheck, &QPushButton::toggled, [&](bool checked){
+        for (size_t i = 0; i < NUM_PIDS; ++i) {
+            graphWidgets[i]->setAutoFollow(checked);
+        }
+        startTimeSpin->setEnabled(!checked);
+        // if turning on, push the window to the latest data
+        if (checked) updateTimeWindow();
+    });
 
 
 

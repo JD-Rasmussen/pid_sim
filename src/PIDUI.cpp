@@ -18,6 +18,11 @@ PidParamsPanel::PidParamsPanel(QWidget* parent)
     tn_->setRange(0.0, 1e6);  tn_->setDecimals(3); tn_->setSingleStep(0.1); // 0 => no I
     td_->setRange(0.0, 1e6);  td_->setDecimals(3); td_->setSingleStep(0.01); // 0 => no D
 
+    outMin_ = new QDoubleSpinBox(this);
+    outMax_ = new QDoubleSpinBox(this);
+    outMin_->setRange(-1e6, 1e6); outMin_->setDecimals(3); outMin_->setSingleStep(1.0);
+    outMax_->setRange(-1e6, 1e6); outMax_->setDecimals(3); outMax_->setSingleStep(1.0);
+
     // Layout
     auto *form = new QFormLayout();
     form->addRow("Index is above ↑", new QWidget(this)); // placeholder msg
@@ -25,6 +30,8 @@ PidParamsPanel::PidParamsPanel(QWidget* parent)
     form->addRow("Kp:", kp_);
     form->addRow("Tn (s):", tn_);
     form->addRow("Td (s):", td_);
+    form->addRow("Output min:", outMin_);
+    form->addRow("Output max:", outMax_);
     setLayout(form);
 
     // When user edits any field, emit paramsEdited with the current values
@@ -42,6 +49,8 @@ PidParamsPanel::PidParamsPanel(QWidget* parent)
     connect(kp_, qOverload<double>(&QDoubleSpinBox::valueChanged), this, [emitIfUserEdit]{ emitIfUserEdit(); });
     connect(tn_, qOverload<double>(&QDoubleSpinBox::valueChanged), this, [emitIfUserEdit]{ emitIfUserEdit(); });
     connect(td_, qOverload<double>(&QDoubleSpinBox::valueChanged), this, [emitIfUserEdit]{ emitIfUserEdit(); });
+    connect(outMin_, qOverload<double>(&QDoubleSpinBox::valueChanged), this, [emitIfUserEdit]{ emitIfUserEdit(); });
+    connect(outMax_, qOverload<double>(&QDoubleSpinBox::valueChanged), this, [emitIfUserEdit]{ emitIfUserEdit(); });
 }
 
 Params PidParamsPanel::getParams() const {
@@ -50,6 +59,8 @@ Params PidParamsPanel::getParams() const {
     p.Kp = kp_->value();
     p.Tn = tn_->value();
     p.Td = td_->value();
+    p.outputMin = outMin_->value();
+    p.outputMax = outMax_->value();
     return p;
 }
 
@@ -59,5 +70,7 @@ void PidParamsPanel::setParams(const Params& p) {
     kp_->setValue(p.Kp);
     tn_->setValue(p.Tn);
     td_->setValue(p.Td);
+    outMin_->setValue(p.outputMin);
+    outMax_->setValue(p.outputMax);
     updatingFromModel_ = false;
 }
