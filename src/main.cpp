@@ -86,6 +86,7 @@ int main(int argc, char *argv[]) {
     startTimeSpin->setRange(0.0, 1000.0);
     startTimeSpin->setSingleStep(1.0);
     startTimeSpin->setValue(0.0);
+    startTimeSpin->setEnabled(false); // auto-follow enabled by default
     controlLayout->addWidget(startTimeLabel);
     controlLayout->addWidget(startTimeSpin);
     
@@ -93,7 +94,7 @@ int main(int argc, char *argv[]) {
     auto *durationSpin = new QDoubleSpinBox(&window);
     durationSpin->setRange(0.1, 1000.0);
     durationSpin->setSingleStep(1.0);
-    durationSpin->setValue(10.0);
+    durationSpin->setValue(60.0);
     controlLayout->addWidget(durationLabel);
     controlLayout->addWidget(durationSpin);
 
@@ -162,6 +163,11 @@ int main(int argc, char *argv[]) {
         if (checked) updateTimeWindow();
     });
 
+    // Initialize auto-follow as enabled (ensures the slot runs once)
+    autoFollowCheck->setChecked(true);
+
+    // Apply initial time window / auto-follow defaults
+    updateTimeWindow();
 
 
     QElapsedTimer clock;
