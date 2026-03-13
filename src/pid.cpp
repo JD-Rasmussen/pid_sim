@@ -30,7 +30,8 @@ float PID::update(float PV, float dt) { // PV = process variable (current value)
     } else {
         derivative_ = 0.0;
     }
-    lastOutput_ = std::max(params_.outputMin, std::min(params_.outputMax, proportional_ + integral_ + derivative_));
+    lastOutput_ = std::clamp(proportional_ + integral_ + derivative_, params_.outputMin, params_.outputMax);
+    //lastOutput_ = std::max(params_.outputMin, std::min(params_.outputMax, proportional_ + integral_ + derivative_));
     first_ = false; 
     
     return lastOutput_;
