@@ -33,7 +33,9 @@
     std::array<WaterTank, NUM_PIDS> watertanks; // array of water tanks for each PID controller
     std::array<SimulationLogger, NUM_PIDS> loggers; // data loggers for each PID/tank pair
     std::array<float, NUM_PIDS> u_values{}; // control signals for each PID (initialized to 0)
- 
+    std::array<float, NUM_PIDS> pv_values{};
+    std::array<float, NUM_PIDS> u_maxvalues{}; 
+    std::array<float, NUM_PIDS> u_minvalues{};
 int main(int argc, char *argv[]) {
  
 
@@ -112,7 +114,19 @@ int main(int argc, char *argv[]) {
     auto *currentULabel = new QLabel("Current U: 0.00");
     currentULabel->setStyleSheet("font-weight: bold; color: darkred;");
     controlLayout->addWidget(currentULabel);
-    
+
+    auto *currentPVLabel = new QLabel("Current PV: 0.00");
+    currentPVLabel->setStyleSheet("font-weight: bold; color: darkred;");
+    controlLayout->addWidget(currentPVLabel);
+
+    auto *currentUmaxLabel = new QLabel("Current Umax: 0.00");
+    currentUmaxLabel->setStyleSheet("font-weight: bold; color: darkred;");
+    controlLayout->addWidget(currentUmaxLabel);
+
+    auto *currentUminLabel = new QLabel("Current Umin: 0.00");
+    currentUminLabel->setStyleSheet("font-weight: bold; color: darkred;");
+    controlLayout->addWidget(currentUminLabel);
+
     controlLayout->addStretch();
     mainLayout->addWidget(controlPanel, 0, Qt::AlignTop);
     
@@ -196,7 +210,9 @@ int main(int argc, char *argv[]) {
                 
                 // Compute new control signal based on current process variable
                 u_values[i] = pids[i].update(pv, fixed_dt);
-                
+                pv_values[i] = pv;
+                u_maxvalues[i] = pids[i].params().outputMax;
+                u_minvalues[i] = pids[i].params().outputMin;
                 // Log data for this PID/tank pair
                 loggers[i].addDataPoint(totalTime, pv, u_values[i]);
             }
@@ -214,6 +230,10 @@ int main(int argc, char *argv[]) {
         
         label->setText(QString("Tick: %1 | Time: %2s").arg(tickCount).arg(totalTime, 0, 'f', 2));
         currentULabel->setText(QString("Current U: %1").arg(u_values[activePIDIndex], 0, 'f', 2));
+        currentPVLabel->setText(QString("Current PV: %1").arg(pv_values[activePIDIndex], 0, 'f', 2));
+        currentUmaxLabel->setText(QString("Current Umax: %1").arg(u_maxvalues[activePIDIndex], 0, 'f', 2));
+        currentUminLabel->setText(QString("Current Umin: %1").arg(u_minvalues[activePIDIndex], 0, 'f', 2));
+
     });
     window.show();
     return app.exec();
