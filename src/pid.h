@@ -31,6 +31,7 @@ class PID{
         float integral_{0.0};
         float derivative_{0.0};
         float lastOutput_{0.0};
+        float lastPV_{0.0};
         bool first_{true};
 
 };

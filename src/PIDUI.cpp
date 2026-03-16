@@ -42,6 +42,8 @@ PidParamsPanel::PidParamsPanel(QWidget* parent)
         p.Kp = kp_->value();
         p.Tn = tn_->value();
         p.Td = td_->value();
+        p.outputMin = outMin_->value();
+        p.outputMax = outMax_->value();
         emit paramsEdited(p);
     };
 

@@ -15,6 +15,7 @@ Params PID::params() const {
 void PID::reset() {
     integral_ = 0.0;
     lastOutput_ = 0.0;
+    lastPV_ = 0.0;
     first_ = true;
 }
 float PID::update(float PV, float dt) { // PV = process variable (current value), dt = time step in seconds
@@ -26,7 +27,8 @@ float PID::update(float PV, float dt) { // PV = process variable (current value)
         integral_ += params_.Kp * (dt / params_.Tn)* error_; // I term where Tn is the integral time constant
     }
     if (params_.Td > 0.0 && !first_ && (lastOutput_ <= params_.outputMax) && (lastOutput_ >= params_.outputMin)) {
-        derivative_ = (PV - (lastOutput_ - proportional_ - integral_)) / dt * params_.Td; // D term where Td is the derivative time constant
+        derivative_ = params_.Kp * params_.Td * (lastPV_ - PV) / dt;
+      //  derivative_ = (PV - (lastOutput_ - proportional_ - integral_)) / dt * params_.Td; // D term where Td is the derivative time constant
     } else {
         derivative_ = 0.0;
     }
