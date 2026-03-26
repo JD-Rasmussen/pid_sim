@@ -1,4 +1,4 @@
-# Install script for directory: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim
+# Install script for directory: /home/jdr/github.com/jd-rasmussen/pid_sim
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/jdr/github.com/jd-rasmussen/pid_sim/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

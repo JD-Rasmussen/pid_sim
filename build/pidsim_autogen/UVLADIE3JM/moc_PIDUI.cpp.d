@@ -1,6 +1,6 @@
-/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/UVLADIE3JM/moc_PIDUI.cpp: /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.h \
-  /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/moc_predefs.h \
-  /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.h \
+/home/jdr/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/UVLADIE3JM/moc_PIDUI.cpp: /home/jdr/github.com/jd-rasmussen/pid_sim/src/PIDUI.h \
+  /home/jdr/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/moc_predefs.h \
+  /home/jdr/github.com/jd-rasmussen/pid_sim/src/pid.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \

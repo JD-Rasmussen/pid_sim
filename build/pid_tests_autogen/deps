@@ -1,9 +1,9 @@
 pid_tests_autogen/timestamp: \
-	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/CMakeLists.txt \
-	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
-	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
-	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/tests/test_ProcessModel.cpp \
-	/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/tests/test_pid.cpp \
+	/home/jdr/github.com/jd-rasmussen/pid_sim/CMakeLists.txt \
+	/home/jdr/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
+	/home/jdr/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
+	/home/jdr/github.com/jd-rasmussen/pid_sim/tests/test_ProcessModel.cpp \
+	/home/jdr/github.com/jd-rasmussen/pid_sim/tests/test_pid.cpp \
 	/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake \

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_lib_autogen/include -I/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src
+CXX_INCLUDES = -I/home/jdr/github.com/jd-rasmussen/pid_sim/build/pid_lib_autogen/include -I/home/jdr/github.com/jd-rasmussen/pid_sim/src
 
 CXX_FLAGS = -std=gnu++20
 

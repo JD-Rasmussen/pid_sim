@@ -1,7 +1,7 @@
 CMakeFiles/pidsim.dir/src/PIDUI.cpp.o: \
- /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.cpp \
+ /home/jdr/github.com/jd-rasmussen/pid_sim/src/PIDUI.cpp \
  /usr/include/stdc-predef.h \
- /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.h \
+ /home/jdr/github.com/jd-rasmussen/pid_sim/src/PIDUI.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -336,7 +336,7 @@ CMakeFiles/pidsim.dir/src/PIDUI.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
- /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.h \
+ /home/jdr/github.com/jd-rasmussen/pid_sim/src/pid.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFormLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qformlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLayout \

@@ -1,5 +1,5 @@
 CMakeFiles/pidsim.dir/src/main.cpp.o: \
- /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/main.cpp \
+ /home/jdr/github.com/jd-rasmussen/pid_sim/src/main.cpp \
  /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
@@ -364,8 +364,8 @@ CMakeFiles/pidsim.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
- /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.h \
- /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.h \
- /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.h \
- /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/SimulationLogger.h \
- /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/GraphWidget.h
+ /home/jdr/github.com/jd-rasmussen/pid_sim/src/ProcessModel.h \
+ /home/jdr/github.com/jd-rasmussen/pid_sim/src/pid.h \
+ /home/jdr/github.com/jd-rasmussen/pid_sim/src/PIDUI.h \
+ /home/jdr/github.com/jd-rasmussen/pid_sim/src/SimulationLogger.h \
+ /home/jdr/github.com/jd-rasmussen/pid_sim/src/GraphWidget.h

@@ -33,3 +33,19 @@ private:
     float outflow; // current outflow rate in liters per dt
     float inflow; // current inflow rate in liters per dt
 };
+
+
+class HeatingElement : public ProcessModel {
+    // a heating element submerged in water, the temperature changes depending on the power input and the thermal mass of the system.
+    // the process variable is the temperature of the water. 
+public:
+    HeatingElement() = default;
+    void setParams(float heatingElementKW, float waterVolume, float ambientTemperature);
+    void reset() override;
+    float update(float u, float dt) override;
+
+private:
+    float heatingElementKW_{1000.0f}; // maximum power in kilo watts
+    float thermalMass_{500.0f}; // thermal mass in joules per degree Celsius
+    float PV_; // current temperature in degrees Celsius
+};

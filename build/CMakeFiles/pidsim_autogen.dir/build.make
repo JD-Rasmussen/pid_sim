@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim
+CMAKE_SOURCE_DIR = /home/jdr/github.com/jd-rasmussen/pid_sim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build
+CMAKE_BINARY_DIR = /home/jdr/github.com/jd-rasmussen/pid_sim/build
 
 # Utility rule file for pidsim_autogen.
 
@@ -70,9 +70,9 @@ CMakeFiles/pidsim_autogen: pidsim_autogen/timestamp
 
 pidsim_autogen/timestamp: /usr/lib/qt5/bin/moc
 pidsim_autogen/timestamp: CMakeFiles/pidsim_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target pidsim"
-	/usr/bin/cmake -E cmake_autogen /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim_autogen.dir/AutogenInfo.json ""
-	/usr/bin/cmake -E touch /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/jdr/github.com/jd-rasmussen/pid_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target pidsim"
+	/usr/bin/cmake -E cmake_autogen /home/jdr/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E touch /home/jdr/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/timestamp
 
 pidsim_autogen: CMakeFiles/pidsim_autogen
 pidsim_autogen: pidsim_autogen/timestamp
@@ -88,6 +88,6 @@ CMakeFiles/pidsim_autogen.dir/clean:
 .PHONY : CMakeFiles/pidsim_autogen.dir/clean
 
 CMakeFiles/pidsim_autogen.dir/depend:
-	cd /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build /home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/jdr/github.com/jd-rasmussen/pid_sim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jdr/github.com/jd-rasmussen/pid_sim /home/jdr/github.com/jd-rasmussen/pid_sim /home/jdr/github.com/jd-rasmussen/pid_sim/build /home/jdr/github.com/jd-rasmussen/pid_sim/build /home/jdr/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/pidsim_autogen.dir/depend
 

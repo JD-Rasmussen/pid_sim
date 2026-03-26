@@ -1,16 +1,16 @@
 {
-	"BUILD_DIR" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen",
-	"CMAKE_BINARY_DIR" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim",
+	"BUILD_DIR" : "/home/jdr/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen",
+	"CMAKE_BINARY_DIR" : "/home/jdr/github.com/jd-rasmussen/pid_sim/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/jdr/github.com/jd-rasmussen/pid_sim/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/jdr/github.com/jd-rasmussen/pid_sim",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/CMakeLists.txt",
-		"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/3.28.3/CMakeSystem.cmake",
+		"/home/jdr/github.com/jd-rasmussen/pid_sim/CMakeLists.txt",
+		"/home/jdr/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/3.28.3/CMakeSystem.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake",
-		"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake",
+		"/home/jdr/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake",
@@ -83,45 +83,45 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake",
 		"/usr/share/cmake-3.28/Modules/GoogleTest.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim",
-	"DEP_FILE" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "/home/jdr/github.com/jd-rasmussen/pid_sim",
+	"DEP_FILE" : "/home/jdr/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "pidsim_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/GraphWidget.h",
+			"/home/jdr/github.com/jd-rasmussen/pid_sim/src/GraphWidget.h",
 			"Mu",
 			"UVLADIE3JM/moc_GraphWidget.cpp",
 			null
 		],
 		[
-			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.h",
+			"/home/jdr/github.com/jd-rasmussen/pid_sim/src/PIDUI.h",
 			"Mu",
 			"UVLADIE3JM/moc_PIDUI.cpp",
 			null
 		],
 		[
-			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.h",
+			"/home/jdr/github.com/jd-rasmussen/pid_sim/src/ProcessModel.h",
 			"Mu",
 			"UVLADIE3JM/moc_ProcessModel.cpp",
 			null
 		],
 		[
-			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/SimulationLogger.h",
+			"/home/jdr/github.com/jd-rasmussen/pid_sim/src/SimulationLogger.h",
 			"Mu",
 			"UVLADIE3JM/moc_SimulationLogger.cpp",
 			null
 		],
 		[
-			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.h",
+			"/home/jdr/github.com/jd-rasmussen/pid_sim/src/pid.h",
 			"Mu",
 			"UVLADIE3JM/moc_pid.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/jdr/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/jdr/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -132,7 +132,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src",
+		"/home/jdr/github.com/jd-rasmussen/pid_sim/src",
 		"/usr/include/x86_64-linux-gnu/qt5",
 		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
@@ -158,48 +158,36 @@
 		"-c",
 		"/usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/jdr/github.com/jd-rasmussen/pid_sim/build/pidsim_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
-		"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_lib_autogen/mocs_compilation.cpp",
-		"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/pid_tests_autogen/mocs_compilation.cpp"
+		"/home/jdr/github.com/jd-rasmussen/pid_sim/build/pid_lib_autogen/mocs_compilation.cpp",
+		"/home/jdr/github.com/jd-rasmussen/pid_sim/build/pid_tests_autogen/mocs_compilation.cpp"
 	],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 1,
-	"PARSE_CACHE_FILE" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim_autogen.dir/ParseCache.txt",
+	"PARALLEL" : 10,
+	"PARSE_CACHE_FILE" : "/home/jdr/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 15,
-	"SETTINGS_FILE" : "/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/jdr/github.com/jd-rasmussen/pid_sim/build/CMakeFiles/pidsim_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/GraphWidget.cpp",
+			"/home/jdr/github.com/jd-rasmussen/pid_sim/src/GraphWidget.cpp",
 			"Mu",
 			null
 		],
+		[ "/home/jdr/github.com/jd-rasmussen/pid_sim/src/PIDUI.cpp", "Mu", null ],
 		[
-			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/PIDUI.cpp",
+			"/home/jdr/github.com/jd-rasmussen/pid_sim/src/ProcessModel.cpp",
 			"Mu",
 			null
 		],
-		[
-			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/ProcessModel.cpp",
-			"Mu",
-			null
-		],
-		[
-			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/main.cpp",
-			"Mu",
-			null
-		],
-		[
-			"/home/angerbode/bootdev/github.com/jd-rasmussen/pid_sim/src/pid.cpp",
-			"Mu",
-			null
-		]
+		[ "/home/jdr/github.com/jd-rasmussen/pid_sim/src/main.cpp", "Mu", null ],
+		[ "/home/jdr/github.com/jd-rasmussen/pid_sim/src/pid.cpp", "Mu", null ]
 	],
 	"VERBOSITY" : 0
 }
