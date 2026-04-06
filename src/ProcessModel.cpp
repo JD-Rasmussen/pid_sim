@@ -59,7 +59,21 @@ float WaterTank::update(float u, float dt) {
     return PV_;
 }
 
-
+void Heater::setParams(float heatingElementKW, float waterVolume, float ambientTemperature) {
+    heatingElementKW_ = heatingElementKW;
+    waterVolume_ = waterVolume;
+    ambientTemperature_ = ambientTemperature;
+    mass_ = waterVolume_ * rho; // mass in Kg
+    reset();
+}
+float Heater::update(float u, float dt) {
+    heatpower_ = std::clamp(u, 0.0f, 100.0f) / 100.0f * heatingElementKW_; // scale heat power: u is in [0, 100], convert to [0, heatingElementKW_]
+    qLoss_ = 0.1f * (PV_ - ambientTemperature_); // simple linear heat loss model
+    float dQ = (heatpower_ - qLoss_) * dt; // change in heat energy in kilo joules
+    float dT = (dQ * 1000.0f) / (mass_ * waterSpecificHeat_); // change in temperature in degrees Celsius
+    PV_ += dT; // update process variable (temperature)
+    return PV_;
+}
 
 
 

@@ -33,9 +33,9 @@ private:
     
     // View window (static time period)
     float viewStartTime_ = 0.0f;
-    float viewDuration_ = 10.0f;  // default 10 seconds
+    float viewDuration_ = 60.0f;  // default 10 seconds
     bool useViewWindow_ = true;   // whether to use the view window or auto-scale
-    bool autoFollow_ = false;     // if true, window tracks the newest data
+    bool autoFollow_ = true;     // if true, window tracks the newest data
     
     // Bounds cache
     bool boundsNeedUpdate_ = true;
